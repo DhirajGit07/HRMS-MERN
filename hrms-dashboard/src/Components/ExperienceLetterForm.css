@@ -1,0 +1,338 @@
+.el-container {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  padding: 20px;
+  position: relative;
+  min-height: 80vh;
+  padding-bottom: 80px; /* Space for sticky footer */
+}
+
+.el-header h2 {
+  margin: 10px 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+.el-error {
+  color: #d93025; /* Google-style red */
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+  font-weight: 500;
+}
+.el-error::before {
+  content: "⚠️ ";
+  margin-right: 4px;
+}
+.el-form-box {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.el-section-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.el-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.el-form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 250px;
+}
+
+.el-form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.el-input-field {
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 36px;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.el-readonly-field {
+  padding: 8px 12px;
+  font-size: 14px;
+  height: 36px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.el-required {
+  color: red;
+  margin-left: 2px;
+}
+
+.el-form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.el-form-actions.el-sticky-footer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+  left: 156px;
+  right: 0;
+  background: #fff;
+  padding: 15px 20px;
+  border-top: 1px solid #e0e0e0;
+  z-index: 100;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.el-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.el-btn.el-blue {
+  background-color: #007bff;
+  color: white;
+}
+
+.el-btn.el-blue:hover {
+  background-color: #0069d9;
+}
+
+.el-btn.el-gray {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.el-btn.el-gray:hover {
+  background-color: #e0e0e0;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 540px) {
+  .el-container {
+    padding: 15px;
+    padding-bottom: 120px; 
+  }
+
+  .el-form-actions.el-sticky-footer {
+    left: 0;
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .el-form-row {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .el-form-group {
+    min-width: 100%;
+  }
+
+  .el-form-actions.el-sticky-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .el-btn {
+    min-width: calc(50% - 5px);
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .el-header h2 {
+    font-size: 18px;
+    margin: 5px 0 15px;
+  }
+
+  .el-section-title {
+    font-size: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .el-container {
+    padding: 10px;
+    padding-bottom: 110px;
+  }
+
+  .el-form-box {
+    padding: 15px;
+  }
+
+  .el-header h2 {
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+
+  .el-section-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+
+  .el-input-field {
+    height: 32px;
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .el-form-actions.el-sticky-footer {
+    padding: 8px 10px;
+  }
+
+  .el-btn {
+    min-width: calc(50% - 5px);
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .el-error {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .el-form-actions.el-sticky-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .el-btn {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .el-input-field {
+    font-size: 12px;
+  }
+
+  .el-form-group label {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .el-container {
+    padding-bottom: 140px; /* Extra space for stacked buttons */
+  }
+}
+
+/* For very small devices (e.g., iPhone 5/SE) */
+@media (max-width: 320px) {
+  .el-container {
+    padding: 8px;
+    padding-bottom: 130px;
+  }
+
+  .el-form-box {
+    padding: 12px;
+  }
+
+  .el-input-field {
+    height: 30px;
+    padding: 5px 8px;
+  }
+
+  .el-form-actions.el-sticky-footer {
+    padding: 6px 8px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 480px) and (orientation: landscape) {
+  .el-container {
+    padding-bottom: 80px;
+  }
+
+  .el-form-box {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .el-form-actions.el-sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* ===== Mobile + Tablet: Ensure full vertical scrolling through all fields ===== */
+@media (max-width: 768px) {
+  /* Allow container to grow and scroll vertically */
+  .el-container {
+    height: auto !important;
+    max-height: 100vh !important;
+    overflow-y: auto !important;
+    padding-bottom: 140px; /* space for footer */
+  }
+  /* Make each row stack and grow */
+  .el-form-row {
+    display: block !important;
+  }
+  .el-form-group {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-bottom: 16px;
+  }
+  /* Ensure form box doesn’t clip content */
+  .el-form-box {
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+  /* Keep footer fixed and visible */
+  .el-form-actions.el-sticky-footer {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* ===== Small Phones: same treatment for narrower screens ===== */
+@media (max-width: 480px) {
+  .el-container {
+    padding-bottom: 160px; /* extra for stacked footer buttons */
+  }
+  /* Inputs and groups remain full-width */
+  .el-form-group,
+  .el-input-field,
+  .el-readonly-field {
+    width: 100% !important;
+  }
+}
+

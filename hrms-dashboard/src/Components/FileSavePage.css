@@ -1,0 +1,898 @@
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.page-wrapper {
+  font-family: Arial, sans-serif;
+  background-color: #f1f3f6;
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+/* -----------------------------------
+   File Actions Bar & Buttons
+----------------------------------- */
+.file-actions-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  background-color: #f2f5f9;
+}
+
+.manage-button,
+.toggle-view-button {
+  border: 1px solid #2196F3;
+  background-color: white;
+  color: #2196F3;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-top: 1rem;
+  margin-right: 5px;
+}
+
+.icon-button {
+  border: 1px solid #2196F3;
+  background-color: white;
+  border-radius: 6px;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.icon-button img {
+  width: 25px;
+  height: 25px;
+}
+
+.icon-button1 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.icon-button1.active {
+  background-color: #e0e0e0;
+  border-radius: 8px;
+}
+
+/* -----------------------------------
+   Navbar & Tabs
+----------------------------------- */
+.navbar {
+  background-color: #1a2a58;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-left .nav-item {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.nav-item.active {
+  font-weight: bold;
+  border-bottom: 2px solid #00aaff;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+.plus-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 22px;
+  padding: 6px 14px;
+  border-radius: 50%;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.icon-group .icon {
+  margin-left: 12px;
+  font-size: 18px;
+}
+
+.tab-header {
+  background: white;
+  padding: 10px 20px;
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+.tab {
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+.tab.active {
+  border-bottom: 2px solid #3182ce;
+  font-weight: bold;
+}
+
+/* -----------------------------------
+   Shared-Empty State Box
+----------------------------------- */
+.shared-box {
+  background: white;
+  margin: 30px auto;
+  padding: 40px 20px;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  border-radius: 8px;
+}
+.shared-content .empty-icon {
+  width: 150px;
+  opacity: 0.6;
+}
+.empty-title {
+  font-size: 18px;
+  margin: 20px 0 10px;
+  color: #333;
+}
+.empty-subtitle {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* -----------------------------------
+   Upload Buttons (Org & Emp)
+----------------------------------- */
+.InnerOrganizationFile-upload-button,
+.InnerEmployeeFile-upload-button {
+   background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+  color: white;
+  border: none;
+  padding: 11px 13px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  margin-top: 0.1rem;
+}
+.InnerOrganizationFile-upload-button:hover,
+.InnerEmployeeFile-upload-button:hover {
+  background-color: #0056b3;
+}
+
+/* -----------------------------------
+   Table Wrapper & Actions
+----------------------------------- */
+.table-wrapper {
+  padding: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+}
+.action-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.action-btn.delete {
+  background-color: #e74c3c;
+  padding: 4px;
+}
+.action-btn.delete:hover {
+  background-color: #c0392b;
+}
+.action-btn-download {
+  background-color: #2196F3;
+  padding: 6px 5px;
+  text-decoration: none;
+}
+
+/* -----------------------------------
+   Org File Table
+----------------------------------- */
+.InnerOrganizationFile-file-table,
+.InnerEmployeeFile-file-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.InnerOrganizationFile-file-table th,
+.InnerOrganizationFile-file-table td,
+.InnerEmployeeFile-file-table th,
+.InnerEmployeeFile-file-table td {
+  padding: 12px;
+  text-align: left;
+  color: black;
+  font-size: 13px;
+  border: 1px solid #e5e7eb;
+}
+.InnerOrganizationFile-file-table th,
+.InnerEmployeeFile-file-table th {
+   padding: 10px 16px !important;
+  background-color: #E5E4E2 !important;
+  color: #4b5b6d !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.InnerOrganizationFile-file-table td,
+.InnerEmployeeFile-file-table td {
+  background-color: white;
+}
+
+/* Scrollable tbody */
+/* .scrollable-table-container {
+  margin-top: 1rem;
+} */
+.scroll-body {
+  max-height: 380px;
+  overflow-y: auto;
+  /* -webkit-overflow-scrolling: touch; */
+}
+.scroll-body table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+/* Action menu in table rows */
+.InnerOrganizationFile-action-cell,
+.InnerEmployeeFile-action-cell {
+  align-items: center;
+  position: relative;
+}
+.InnerOrganizationFile-dots-button,
+.InnerEmployeeFile-dots-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+}
+.InnerOrganizationFile-dropdown-menu,
+.InnerEmployeeFile-dropdown-menu {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 120px;
+}
+.InnerOrganizationFile-dropdown-item,
+.InnerEmployeeFile-dropdown-item {
+ padding: 8px 12px;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 14px;
+}
+.InnerOrganizationFile-dropdown-item:hover,
+.InnerEmployeeFile-dropdown-item:hover {
+  background-color: #f5f5f5;
+  width: -webkit-fill-available;
+}
+
+/* -----------------------------------
+   Delete Confirmation Modal
+----------------------------------- */
+.file-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.file-modal-content {
+  background-color: #fff;
+  padding: 24px 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+}
+
+.file-modal-content h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #c62828;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.file-modal-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.file-modal-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.file-confirm-btn {
+  padding: 8px 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.file-cancel-btn {
+  padding: 8px 16px;
+  background-color: #b0b0b0;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.file-confirm-btn:hover {
+  background-color: #c62828;
+}
+
+.file-cancel-btn:hover {
+  background-color: #b0b0b0;
+  color: #ffffff;
+}
+
+.file-warning-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+/* -----------------------------------
+   Shared-With Column Tooltip & Scrolling
+----------------------------------- */
+.shared-with-cell {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+.shared-with-cell:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 0; top: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px;
+  z-index: 100;
+  max-width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.shared-with-container {
+  max-height: 45px;
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+}
+.shared-with-container::-webkit-scrollbar {
+  width: 6px;
+}
+.shared-with-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+.shared-with-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+.shared-with-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* -----------------------------------
+   Search Bar Styles
+----------------------------------- */
+.file-search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  flex-shrink: 0;
+}
+
+.file-search-icon {
+  position: absolute;
+  left: 10px;
+  color: #7f8c8d;
+  margin-top: 1rem;
+}
+
+.file-search-input {
+  padding: 8px 12px 8px 35px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 180px;
+  margin-top: 1rem;
+  background-color: white;
+  font-size: 14px;
+  transition: border-color 0.3s;
+  margin-left: 5px;
+}
+
+.file-search-input:focus {
+  outline: none;
+  border-color: #2196F3;
+}
+
+/* -----------------------------------
+   Responsive Media Queries
+----------------------------------- */
+
+/* Tablets & small desktops */
+@media (max-width: 1200px) {
+  .table-wrapper { padding: 15px; }
+  .scroll-body { max-height: 50vh; }
+  .InnerOrganizationFile-upload-button,
+  .InnerEmployeeFile-upload-button { font-size: 13px; padding: 8px 12px; }
+  .empty-title { font-size: 16px; }
+  .empty-subtitle { font-size: 14px; }
+}
+@media (max-width: 1200px) {
+   .shared-box {
+        width: 80%;
+        height: 35%;
+        overflow-y: auto;
+  }
+.shared-content .empty-icon {
+  width: 80px;
+  opacity: 0.6;
+}
+}
+
+/* Portrait tablets & large phones */
+@media (max-width: 768px) {
+  .shared-box {
+    margin-top: 145px;
+        width: 80%;
+        height: 35%;
+  }
+.shared-content .empty-icon {
+  width: 80px;
+  opacity: 0.6;
+}
+  .file-actions-bar{
+    margin-top: 130px;
+  }
+  
+  .table-wrapper { 
+    padding: 10px; 
+    /* margin-top: 140px; */
+  }
+
+  .table-wrapper-ie { 
+    padding: 10px; 
+    margin-top: 130px;
+  }
+
+  .table-wrapper-or { 
+    padding: 10px; 
+    margin-top: 130px;
+  }
+  .scrollable-table-container { overflow-x: auto; }
+  .scroll-body { max-height: 60vh; }
+
+  .InnerOrganizationFile-file-table th,
+  .InnerOrganizationFile-file-table td,
+  .InnerEmployeeFile-file-table th,
+  .InnerEmployeeFile-file-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  /* Mobile adjustments for action bar */
+  .file-actions-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .file-search-input {
+    width: 180px;
+    padding-left: 30px;
+  }
+
+  .manage-button,
+  .toggle-view-button {
+    padding: 6px 12px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  /* Hide scrollbar while still allowing scroll */
+  .file-actions-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .file-actions-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Small phones */
+@media (max-width: 576px) {
+  .scroll-body { max-height: 50vh; }
+  .shared-box { padding: 30px 15px; }
+
+  /* Mobile fixes for filename column */
+  .InnerOrganizationFile-file-table td:first-child,
+  .InnerEmployeeFile-file-table td:first-child {
+    max-width: 120px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  
+  .file-search-input {
+    width: 150px;
+  }
+
+  .manage-button,
+  .toggle-view-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .shared-box { padding: 20px 10px; }
+  .file-modal-content { padding: 20px; }
+  .file-modal-content h3 { font-size: 16px; }
+  .file-modal-content p { font-size: 14px; }
+
+  .file-search-input {
+    width: 120px;
+    padding-left: 28px;
+  }
+
+  .manage-button,
+  .toggle-view-button {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+}
+
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.page-wrapper {
+  font-family: Arial, sans-serif;
+  background-color: #f1f3f6;
+  min-height: 100vh;
+}
+
+/* -----------------------------------
+   File Actions Bar & Buttons
+----------------------------------- */
+/* .file-actions-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  background-color: #f2f5f9;
+} */
+
+/* .manage-button,
+.toggle-view-button {
+  border: 1px solid #2196F3;
+  background-color: white;
+  color: #2196F3;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-top: 1rem;
+  margin-right: 5px;
+} */
+
+/* -----------------------------------
+   Table Wrapper & Sticky Header - FIXED
+----------------------------------- */
+.table-wrapper {
+  padding: 20px;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.table-wrapper-ie {
+  padding: 20px;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.table-wrapper-or {
+  padding: 20px;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.scrollable-table-container {
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid #e5e7eb;
+  /* border-radius: 8px; */
+  background: white;
+}
+
+.scrollable-table-container-or{
+  height: 80%;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid #e5e7eb;
+  /* border-radius: 8px; */
+  background: white;
+  margin-top: 17px;
+}
+
+.scrollable-table-container-ie {
+   height: 80%;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid #e5e7eb;
+  /* border-radius: 8px; */
+  background: white;
+  margin-top: 17px;
+}
+
+.InnerEmployeeFile-file-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.InnerEmployeeFile-file-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.InnerEmployeeFile-file-table th,
+.InnerEmployeeFile-file-table td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 13px;
+  border: 1px solid #e5e7eb;
+}
+
+.InnerEmployeeFile-file-table th {
+  background-color: #E5E4E2 !important;
+  color: #4b5b6d !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.InnerEmployeeFile-file-table td {
+  background-color: white;
+}
+
+.InnerEmployeeFile-file-table tbody {
+  overflow-y: auto;
+}
+
+/* -----------------------------------
+   Action Menu in Table Rows
+----------------------------------- */
+.InnerEmployeeFile-action-cell {
+  align-items: center;
+  position: relative;
+}
+
+.InnerEmployeeFile-dots-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.InnerEmployeeFile-dropdown-menu {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 120px;
+}
+
+.InnerEmployeeFile-dropdown-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.InnerEmployeeFile-dropdown-item:hover {
+  background-color: #f5f5f5;
+  width: -webkit-fill-available;
+}
+
+/* Rest of your CSS remains unchanged */
+.shared-box {
+  background: white;
+  margin: 30px auto;
+  padding: 40px 20px;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  border-radius: 8px;
+}
+/* 
+.file-search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  flex-shrink: 0;
+}
+
+.file-search-icon {
+  position: absolute;
+  left: 10px;
+  color: #7f8c8d;
+  margin-top: 1rem;
+}
+
+.file-search-input {
+  padding: 8px 12px 8px 35px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 180px;
+  margin-top: 1rem;
+  background-color: white;
+  font-size: 14px;
+  transition: border-color 0.3s;
+  margin-left: 5px;
+}
+ */
+
+
+
+ /* Add these styles to your existing CSS file */
+
+/* Mobile Responsive Table */
+@media (max-width: 768px) {
+  .scrollable-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .InnerEmployeeFile-file-table {
+    min-width: 600px; /* Minimum width to ensure content fits */
+  }
+  
+  .InnerEmployeeFile-file-table th,
+  .InnerEmployeeFile-file-table td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  
+  /* Make specific columns more compact */
+  .InnerEmployeeFile-file-table th:nth-child(2),
+  .InnerEmployeeFile-file-table td:nth-child(2) {
+    max-width: 120px; /* Uploaded By column */
+  }
+  
+  .InnerEmployeeFile-file-table th:nth-child(3),
+  .InnerEmployeeFile-file-table td:nth-child(3),
+  .InnerEmployeeFile-file-table th:nth-child(4),
+  .InnerEmployeeFile-file-table td:nth-child(4) {
+    max-width: 100px; /* Shared With and Folder columns */
+  }
+  
+  .InnerEmployeeFile-file-table th:last-child,
+  .InnerEmployeeFile-file-table td:last-child {
+    max-width: 60px; /* Actions column */
+  }
+  
+  /* Improve text handling in cells */
+  .InnerEmployeeFile-file-table td {
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Adjust action menu for mobile */
+  .InnerEmployeeFile-dropdown-menu {
+    right: 10px;
+    min-width: 100px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  /* .file-actions-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  } */
+  
+  /* .file-search-container {
+    width: 100%;
+  }
+  
+  .file-search-input {
+    width: 100%;
+  } */
+  
+  .InnerEmployeeFile-file-table {
+    min-width: 650px; /* Slightly wider for very small screens */
+  }
+  
+ 
+}
+
+
+/* Improve empty state for mobile */
+@media (max-width: 768px) {
+  .shared-box {
+    margin: 20px auto;
+    padding: 20px 15px;
+  }
+  
+  .shared-content .empty-icon {
+    width: 100px;
+  }
+  
+  .empty-title {
+    font-size: 16px;
+  }
+  
+  .empty-subtitle {
+    font-size: 14px;
+  }
+}

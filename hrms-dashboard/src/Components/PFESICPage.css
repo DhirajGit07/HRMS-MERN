@@ -1,0 +1,623 @@
+.pf-container {
+  padding: 20px 15px;
+  font-family: Arial, sans-serif;
+  background-color: #f1f3f6;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.pf-tabs {
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.pf-tab {
+  font-weight: 500;
+  color: #002d5e;
+  cursor: pointer;
+  padding-bottom: 6px;
+  position: relative;
+}
+
+.pf-tab.active {
+  font-weight: bold;
+}
+
+.pf-tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+}
+
+.pf-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.pf-add-button {
+  background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+  color: white;
+  padding: 10px 18px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-right: 5px;
+}
+
+.pf-add-button:hover {
+  background-color: #0077cc;
+}
+.pf-export-button {
+background: linear-gradient(to right, #66bb6a, #4CAF50,#388e3c);
+ color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  /* border: none; */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+.pf-content {
+  color: #444;
+  font-size: 14px;
+  overflow-x: auto; /* Ensures horizontal scroll if table is wide */
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* Table Wrapper to allow scroll */
+.pf-table {
+  min-width: 1200px; /* Ensures scrolling if content is wide */
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.pf-table th {
+    padding: 12px 8px;
+  text-align: left;
+  background-color: #E5E4E2;
+  color: #4b5b6d;
+  ;
+  /* opacity: 0.9; */
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #dee2e6;
+  border-right: 1px solid #e0e0e0;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+.pf-table th {
+  padding: 10px 16px !important;
+  background-color: #e9e9e9 !important;
+  color: #4b5b6d !important;
+  /* opacity: 0.9; */
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.pf-table td {
+border: 1px solid #ccc;
+ padding: 10px;
+  /* border: 1px solid #ccc; */
+  text-align: left;
+  white-space: nowrap; 
+}
+
+.pdf-view-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 1px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pdf-view-button:hover {
+  background-color: #45a049;
+}
+/* Action buttons styles */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-button:hover {
+  background-color: #0b7dda;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.pdf-view-button {
+ background: linear-gradient(to right, #66bb6a, #4CAF50,#388e3c);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pdf-view-button:hover {
+  background-color: #388e3c;
+}
+
+/* Table styles */
+.pf-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pf-table tr:hover {
+   background-color: #f8f9fa;
+}
+
+/* Responsive table */
+.pf-table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Action Menu Styles */
+.pf-action-menu-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.pf-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.pf-dropdown-menu {
+   position: absolute;
+  right: 0;
+  bottom: -30%;
+ background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 120px;
+  margin-right: 50px;
+}
+
+.pf-dropdown-item {
+  width: 100%;
+  text-align: left;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+}
+
+.pf-dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.pf-dropdown-item i {
+  width: 18px;
+  text-align: center;
+}
+
+.pf-delete-item {
+  color: #e74c3c !important;
+}
+
+/* Add this to your table CSS to prevent row height changes */
+.pf-table td {
+  vertical-align: middle;
+  position: relative;
+  
+}
+
+/* Search Container Styles */
+.pf-search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  flex-grow: 1;
+  max-width: 400px;
+}
+
+.pf-search-icon {
+  position: absolute;
+  left: 10px;
+  color: #7f8c8d;
+  pointer-events: none;
+}
+
+.pf-search-input {
+  padding: 8px 12px 8px 35px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 50%;
+  background-color: white;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.pf-search-input:focus {
+  outline: none;
+  border-color: #1890ff;
+}
+
+/* Header adjustments for search */
+.pf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.pf-swal2-confirm-export {
+  background-color: transparent;
+  color: #2196F3;
+  border: 1px solid #2196F3;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pf-swal2-confirm-export:hover {
+  background-color: transparent;
+  color: #2196F3;
+  border: 1px solid #2196F3;
+}
+
+.pf-swal2-cancel-export {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.pf-swal2-cancel-export:hover{
+   background-color: #dc3545;
+  color: white;
+
+}
+/* Add space between buttons */
+.pf-swal2-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+
+/* Delete Confirmation Modal Styles */
+.pf-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.pf-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+  width: 90%;
+}
+
+.pf-warning-icon {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.pf-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pf-cancel-btn, .pf-confirm-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.pf-cancel-btn {
+  background: #f1f1f1;
+  color: #333;
+}
+
+.pf-confirm-btn {
+ background: linear-gradient(to right, #ef5350, #e53935, #c62828);
+  color: white;
+}
+
+/* Toast Container Overrides */
+/* .Toastify__toast-container {
+  z-index: 9999;
+} */
+/* Responsive adjustments for search */
+@media (max-width: 768px) {
+  .pf-container{
+    margin-top: 100px;
+  }
+  .pf-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .pf-search-container {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .pf-add-button, 
+  .pf-export-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .pf-search-input {
+    padding: 6px 8px 6px 30px;
+    font-size: 13px;
+  }
+  
+  .pf-search-icon {
+    left: 8px;
+    font-size: 14px;
+  }
+}
+
+/* Media Queries for Responsive Table with Vertical Scrolling */
+@media (max-width: 1024px) {
+  .pf-table-container {
+    position: relative;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin: 0;
+    display: block;
+    max-height: 60vh;
+    overflow-x: auto; /* Disable horizontal scrolling */
+  }
+
+  .pf-table {
+    width: 100%; /* Full width */
+    margin: 0;
+    display: table;
+  }
+
+  .pf-table thead {
+    display: table-header-group;
+    top: 0;
+    z-index: 3;
+    background-color: #E5E4E2;
+  }
+
+  .pf-table tbody {
+    display: table-row-group;
+    width: 100%;
+  }
+
+  .pf-table tr {
+    display: table-row;
+    width: 100%;
+  }
+
+  .pf-table th,
+  .pf-table td {
+    white-space: normal; /* Allow text wrapping */
+    overflow: visible;
+    text-overflow: clip;
+    padding: 8px 6px;
+    font-size: 12px;
+    display: table-cell;
+    width: auto; 
+  }
+
+  .pdf-view-button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .pf-action-btn {
+    font-size: 16px;
+    padding: 3px 6px;
+  }
+
+  .pf-dropdown-menu {
+    min-width: 140px;
+    position: absolute;
+    right: 0;
+    z-index: 4;
+  }
+
+  .pf-dropdown-item {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+/* For smaller mobile devices */
+@media (max-width: 480px) {
+  .pf-table-container {
+    max-height: 50vh;
+  }
+
+  .pf-table th,
+  .pf-table td {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+
+  .pdf-view-button {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+
+  .pf-action-btn {
+    font-size: 14px;
+  }
+
+  .pf-dropdown-menu {
+    min-width: 120px;
+  }
+
+  .pf-dropdown-item {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+/* For landscape mode on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .pf-table-container {
+    max-height: 50vh;
+  }
+}
+
+/* Mobile Responsive Styles for Fixed Width Layout */
+@media (max-width: 768px) {
+  .pf-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .pf-search-container {
+    width: 100%;
+  }
+
+  .pf-search-input {
+    width: 100%;
+    padding: 10px 12px 10px 38px;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+
+  .pf-button-group {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .pf-add-button, 
+  .pf-export-button {
+    flex: 1;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    min-width: 0; /* Prevents flex items from overflowing */
+  }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 360px) {
+  .pf-search-input {
+    padding: 8px 12px 8px 35px;
+    font-size: 14px;
+  }
+
+  .pf-add-button, 
+  .pf-export-button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .pf-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .pf-search-container {
+    flex: 2;
+    min-width: 200px;
+  }
+
+  .pf-button-group {
+    flex: 1;
+    min-width: 180px;
+  }
+}

@@ -1,0 +1,478 @@
+/* Main container for the settings page */
+.setting-container {
+    padding: 30px 20px;
+    background-color: #f3f6fb;
+    min-height: 100vh;
+   font-family: Arial, sans-serif;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    margin-top: 3rem;
+}
+/* .setting-user-profile-main-container{
+    overflow-y: auto;
+    height: 100vh;
+} */
+
+/* Section title */
+.setting-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #102E50;
+    margin-bottom: 28px;
+}
+
+.search-icon {
+    margin-left: 80rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: -4rem;
+    color: #102E50;
+}
+
+/* Grid layout for service cards */
+.setting-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(140px, 1fr));
+    row-gap: 30px;
+}
+
+/* Individual service card */
+.setting-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px 1px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-in-out;
+    height: 40px;
+    width: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icon inside service card */
+.setting-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.setting-user-profile img {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+}
+
+.setting-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.setting-user-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 7rem 0 7rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 20px 2rem;
+    max-width: 90%;
+    width: 75%;
+    gap: 12px;
+}
+
+.user-info img {
+    border-radius: 20%;
+    width: 60px;
+    height: 60px;
+}
+
+/* HRMS logo and text */
+.hrms-branding {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap; 
+}
+
+.sidebar-logo-img {
+    width: 24px;
+    height: 24px;
+}
+
+.Settingpage-hrms-logo {
+    font-size: 2rem;
+    font-weight: 510;
+    line-height: 1;
+    margin-top: -0.1rem;
+    color: black;
+}
+
+.setting-user-profile span {
+    font-size: 17px;
+    white-space: break-spaces;
+}
+
+.hrms-title {
+    font-size: 18px;
+    color: black;
+}
+
+/* User profile section */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* User name text */
+.user-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* User role text */
+.user-role {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .setting-container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    
+    .setting-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .setting-user-profile {
+        margin: 2rem 4rem 0 4rem;
+        width: 80%;
+    }
+}
+
+@media (max-width: 992px) {
+    .setting-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .Settingpage-hrms-logo {
+        font-size: 1.5rem;
+    }
+    
+    .setting-user-profile {
+        padding: 15px 1.5rem;
+    }
+}
+
+@media (max-width: 1024px){
+    .setting-user-profile-main-container{
+        overflow-y: auto;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .setting-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .setting-card {
+        width: 100%;
+        height: 50px;
+        padding: 20px 0;
+    }
+    
+    .setting-user-profile {
+        margin: 1.5rem 2rem 0 2rem;
+        width: 85%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        margin-top: 120px;
+    }
+    
+    .hrms-branding {
+        margin-bottom: 10px;
+    }
+    
+    .Settingpage-hrms-logo {
+        font-size: 1.3rem;
+    }
+    
+    .user-info {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .setting-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .setting-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .setting-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .setting-card {
+        height: 45px;
+        padding: 15px 0;
+    }
+    
+    .setting-icon {
+        font-size: 24px;
+    }
+    
+    .setting-name {
+        font-size: 14px;
+    }
+    
+    .setting-user-profile {
+        margin: 1rem auto 0;
+        width: 90%;
+        padding: 12px;
+        margin-top: 120px;
+    }
+    
+    .Settingpage-hrms-logo {
+        font-size: 1.2rem;
+    }
+    
+    .user-info img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .user-name {
+        font-size: 15px;
+    }
+    
+    .user-role {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .setting-container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .setting-title {
+        font-size: 18px;
+        padding-left: 0.5rem;
+    }
+    
+    .setting-user-profile {
+        width: 95%;
+        margin: 1rem auto 0;
+        margin-top: 110px;
+    }
+    
+    .Settingpage-hrms-logo {
+        font-size: 1.1rem;
+    }
+    
+    .sidebar-logo-img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .user-info {
+        gap: 8px;
+    }
+    
+    .user-info img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Add this to enable vertical scrolling for the whole page */
+html, body {
+    overflow-x: hidden; 
+    height: 100%;
+}
+
+.setting-container {
+    /* overflow-y: auto; 
+    height: calc(100vh - 120px);  */
+    padding-bottom: 65px;
+}
+
+/* Existing styles remain the same until the media queries */
+/* Full mobile responsive scrollable cards */
+@media (max-width: 768px) {
+  /* Setting container adjusted for mobile */
+  .setting-container {
+    padding: 1rem;
+    margin-top: -0rem;
+    overflow: hidden;
+  }
+
+  /* Scrollable cards grid */
+  .setting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+    gap: 12px;
+    /* max-height:60vh; 
+    overflow-y: auto; */
+    padding-right: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Card style */
+  .setting-card {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .setting-icon {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .setting-name {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #333;
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+  .setting-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .setting-card {
+    width: 135px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 400px) {
+  .setting-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .setting-card {
+    width: 130px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 320px) {
+  .setting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+    gap: 10px;
+    /* max-height:40vh;
+    overflow-y: auto; */
+    padding-right: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Card style */
+  .setting-card {
+    width: 80%;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .setting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+    gap: 10px;
+    /* max-height:50vh;
+    overflow-y: auto; */
+    padding-right: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Card style */
+  .setting-card {
+    width: 80%;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .setting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+    gap: 10px;
+    /* max-height:50vh; 
+    overflow-y: auto; */
+    padding-right: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Card style */
+  .setting-card {
+    width: 80%;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+

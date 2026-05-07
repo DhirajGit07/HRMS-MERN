@@ -1,0 +1,288 @@
+/* === Base Styles === */
+.company-view {
+  width: 100%;
+  padding: 20px;
+  background-color: #f1f3f6;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* === Super Admin Card === */
+.company-view-superadmin {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.company-back-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.company-initial-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e0f2f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #00796b;
+  margin-top: 20px;
+}
+
+.company-info-container {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.company-view-label {
+  font-size: 0.75rem;
+  color: #777;
+  margin-bottom: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.company-view-fullname {
+  color: #102E50;
+  margin: 5px 0 10px;
+  font-size: 1.2rem;
+}
+
+  .company-id-label {
+      text-align: left;
+      margin-left: -0.rem;
+      font-size: 0.85rem;
+      color: #777;
+      /* margin-bottom: 4px; */
+      font-weight: 500;
+      margin-top: 0rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+ .company-view-id {
+      margin-left: 6.55rem;
+      margin-top: -1.77rem;
+      font-size: 12px;
+    }
+
+/* === Tabs Container === */
+.company-view-tabs-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.company-view-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.company-view-tabs button {
+  padding: 8px 15px;
+  border: 1px solid #2196F3;
+  background-color: #fff;
+  color: #2196F3;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.company-view-tabs button:hover {
+  background-color: #e6f0ff;
+}
+
+.company-view-tabs button.active {
+  background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+  color: #fff;
+  border-color: #1976d2;
+}
+
+/* === Export Button === */
+.company-export-button {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #4CAF50, #2E7D32);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-self: flex-end;
+}
+
+.company-export-button:hover {
+  background: linear-gradient(to right, #43A047, #1B5E20);
+}
+
+.export-icon {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+/* === Table Styles === */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.company-view-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.company-view-table th,
+.company-view-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.company-view-table th {
+  background-color: #E9E9E9;
+  color: #4B5B6D;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.no-users-found {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-style: italic;
+}
+
+/* === Status Badges === */
+.status-active {
+  display: inline-block;
+  background: linear-gradient(to right, #E6F4EA, #CFE9D9, #B6E2C8);
+  color: #198754;
+  border: 1px solid #B6E2C7;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.status-inactive {
+  display: inline-block;
+  background: linear-gradient(to right, #FBEAEA, #F9D1D1, #F5BABA);
+  color: #DC3545;
+  border: 1px solid #F5C2C7;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+/* === Responsive Styles === */
+@media (min-width: 768px) {
+  .company-view {
+    padding: 20px 40px;
+  }
+  
+  .company-view-superadmin {
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .company-initial-circle {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    margin-top: 0;
+  }
+  
+  .company-view-fullname {
+    font-size: 1.5rem;
+  }
+  
+  .company-view-tabs-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .company-export-button {
+    margin-top: 0;
+  }
+  
+  .company-view-tabs button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-view-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .company-view-tabs button {
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+  }
+  
+  .company-view-table th,
+  .company-view-table td {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .company-view {
+    padding: 15px;
+  }
+  
+  .company-initial-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .company-view-tabs button {
+    min-width: 80px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+  
+  .company-export-button {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+  
+  .company-view-table th,
+  .company-view-table td {
+    padding: 8px 10px;
+  }
+}

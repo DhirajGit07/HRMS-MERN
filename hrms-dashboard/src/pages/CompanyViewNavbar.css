@@ -1,0 +1,1074 @@
+body{
+  font-family: 'Arial', sans-serif;
+  
+}
+.super-navbar {
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+ 
+  color: black;
+  
+  padding: 1rem;
+  /* margin-bottom: 0.25rem; */
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+}
+.super-nav-links {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: lighter;
+  color: black;
+  
+}
+
+.super-nav-links span {
+  cursor: pointer;
+}
+
+.super-nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.super-nav-icons img {
+  width: 21px;
+  height: 21px;
+  
+}
+
+
+.super-user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: black;
+}
+
+.super-add_button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 0.2rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.super-tabs {
+  display: flex;
+  background: #ffffff;
+  padding-left: 1rem;
+  margin-top: 0;
+  padding-top: 0.2rem;
+}
+
+.super-tab {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #102E50;
+  font-size: 0.95rem;
+}
+/* .super-nav-links.active {
+  border-bottom: 2px solid #2196F3;
+  font-weight: bold;
+} */
+
+.super-tab.active {
+  border-bottom: 2px solid #2196F3;
+  font-weight: bold;
+}
+.super-profile-pic {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.super-icon-button {
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  cursor: pointer;
+}
+.super-icon-button1 {
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  display: flex;
+}
+.super-icon-button1 :hover{
+  color: red;
+  opacity: 10;
+}
+.super-quick-actions-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  width: 200px;
+  background: white;
+  color: black;
+  
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.super-dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  /* font-weight: bold; */
+  margin-bottom: 10px;
+}
+
+.super-settings-icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.super-dropdown-search {
+  /* width: 100%; */
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.super-dropdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: #ccc transparent;
+  /* For Firefox */
+}
+
+.super-dropdown-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.super-dropdown-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.super-dropdown-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.super-dropdown-list li {
+  padding: 8px;
+  cursor: pointer;
+  /* border-radius: 4px; */
+}
+
+.super-dropdown-list li:hover {
+  background-color: #2196F3;
+  color: white;
+}
+.super-search-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-left: 10px;
+  outline: none;
+}
+/* Modal Overlay */
+/* Modal Overlay */
+.notificationNav-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 24, 39, 0.4); /* dark semi-transparent backdrop */
+  z-index: 1000;
+}
+
+/* Drawer */
+.notificationNav-modal-content {
+  background-color: #edeef0; /* light gray drawer background */
+  width: 480px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 24px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  box-sizing: border-box;
+   border-radius: 12px;
+  
+}
+.notifications{
+  font-weight: lighter;
+  font-size: 18px;
+  color: #102E50;
+}
+/* Inner White Box */
+.notificationNav-inner-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  height: 32rem;
+  margin-top: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.notificationNav-form-group {
+  margin-bottom: 16px;
+}
+/* Close Button (top-right "X") */
+.notificationNav-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.notificationNav-close-btn:hover {
+  color: red;
+}
+
+
+/* User Profile Icon page of nav */
+.Account-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  background-color: rgba(17, 24, 39, 0.4); 
+  z-index: 1000;
+}
+
+/* Drawer */
+.Account-modal-content {
+  background-color: #f3f6fb; /* light gray drawer background */
+  width: 450px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 24px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  overflow-y: auto;
+  /* overflow: hidden; */
+  box-sizing: border-box;
+   border-radius: 8px;
+  
+}
+.Account-inner-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 14px;
+  height: 10rem;
+  margin-top: rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.Account{
+  font-weight: lighter;
+  font-size: 18px;
+  color: #102E50;
+}
+
+/* Close Button (top-right "X") */
+/* .Account-close-btn {
+  position: absolute;
+  top: -0.10rem;
+  right: 0.55rem;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.Account-close-btn:hover {
+  color: red;
+} */
+.superNav-user-info img{
+    border-radius: 15%;
+    width: 60px;
+    height: 60px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+/* User name text */
+.superNav-user-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+    margin-top: -4rem;
+    margin-left: 5.9rem;
+}
+
+/* User role text */
+.superNav-user-role {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    margin-left: 6rem;
+    /* margin-top: 2px; */
+}
+.superNav-user-id{
+  font-size: 12px;
+    color: #666;
+    font-weight: 500;
+    margin-left: 6rem;
+
+}
+/* .Account-action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  gap: 10px;
+} */
+
+.Account-button {
+  background-color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #2196F3;
+  margin-top: 1rem;
+  border: 2px solid #2196F3;
+}
+
+.Account-button:hover {
+  color: #2196F3;
+}
+
+
+.Account-button:hover {
+  background-color: #ffffff;
+  opacity: 0.8;
+}
+
+.Account-logout {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #d9534f;
+  font-weight: 500;
+  cursor: pointer;
+   margin-top: 3rem;
+}
+
+.logout-icon {
+  margin-right: 6px;
+  font-size: 1.2rem;
+}
+
+
+.profileModel-morning-greeting {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+   height: 4.5rem;
+   margin-top: 1rem;
+}
+
+.profileModel-hrms-logo {
+  width: 0px;
+  height: 40px;
+  margin-right: 15px;
+  margin-top: -3rem;
+}
+
+.profileModel-greeting-text {
+  flex: 2;
+}
+
+.profileModel-good-morning {
+  margin: 0;
+  font-size: 15px;
+}
+
+.profileModel-greeting-name {
+  /* font-weight: bold; */
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.profileModel-day-wish {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #2196F3;
+}
+.Account-inner-notification {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 14px;
+  height: 19rem;
+  margin-top: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  
+}
+.Accoutn_Notification {
+  font-size: 14px;
+  color: #102E50;
+  font-weight: lighter;
+  max-height: 270px; /* or any height you want */
+  overflow-y: auto;
+   scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+.logout-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: super;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.logout-text {
+  margin-top: 16px;
+  font-size: 1.2rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Simple spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.notification-icon-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* Modal Overlay */
+.notificationNav-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 24, 39, 0.4); /* dark semi-transparent backdrop */
+  z-index: 1000;
+}
+
+/* Drawer */
+.notificationNav-modal-content {
+  background-color: #edeef0; /* light gray drawer background */
+  width: 480px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 24px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.notifications {
+  font-weight: lighter;
+  font-size: 18px;
+  color: #102E50;
+  margin-bottom: 10px; 
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Inner White Box */
+.notificationNav-inner-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  height: 35rem; 
+  margin-top: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  max-height: 35rem;
+    overflow-y: auto;
+}
+
+.notificationNav-form-group {
+  margin-bottom: 16px;
+  padding: 10px; 
+  border: 1px solid #eee; 
+  border-radius: 8px; 
+  background-color: #f9f9f9; 
+  position: relative;
+}
+
+.notificationNav-form-group.new-notification {
+  background-color: #e6f7ff; 
+  border-color: #91d5ff; 
+}
+
+/* Close Button (top-right "X") */
+.notificationNav-close-btn {
+  position: static; 
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.notificationNav-close-btn:hover {
+  color: red;
+}
+
+/* Styling for notification content types (leave and new hire) */
+.notification-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-item-content strong.notification-category {
+  color: #161616; 
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.notification-item-content strong {
+  color: #2196F3; 
+}
+
+.notification-details,
+.notification-reason {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 3px;
+}
+
+/* New notification dot */
+.new-notification-dot {
+  position: absolute;
+  top: 5px; 
+  left: 5px; 
+  color: #ff4757; 
+  font-size: 2em; 
+  line-height: 0;
+  margin-right: 5px;
+}
+
+.notificationNav-form-group.new-notification .notification-item-content {
+  padding-left: 20px; 
+}
+/* Remove Notification Button (×) */
+.notification-remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: super 0.2s ease;
+}
+
+.notification-remove-btn:hover {
+  background-color: #f5f5f5;
+  color: #ff4757;
+  transform: scale(1.1);
+}
+
+/* Clear super Button */
+.notificationNav-clear-super-btn {
+  background: none;
+  border: none;
+  color: #2196F3;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: super 0.2s ease;
+}
+
+.notificationNav-clear-super-btn:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.notificationNav-clear-super-btn:disabled {
+  color: #9e9e9e;
+  cursor: not-superowed;
+  background-color: transparent;
+}
+
+/* Notification Header Buttons Container */
+.notification-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.logout-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-confirm-modal {
+  background: #fff;
+  color: #102E50;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  height: 20%;
+  width: auto;
+  /* width: 25%; */
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+}
+.logout-confirm-modal h3{
+  /* color: #2196F3; */
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.logout-confirm-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 1rem;
+  /* margin-left: 6rem; */
+  /* justify-content: space-around; */
+}
+.user-name1 {
+    font-size: 16px;
+    font-weight: 600;
+    /* color: #102E50; */
+    text-align: right;
+}
+.logout-confirm-btn {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.logout-cancel-btn {
+  background-color: #ff4d4f;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5.5rem;
+  
+}
+.logout-confirm-btn:hover {
+  background-color: #102E50;
+}
+
+.logout-cancel-btn:hover {
+  background-color: #b0b0b0;
+}
+
+
+.profile-logout-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.profile-logout-button {
+  color: red;
+}
+
+.profile-logout-label {
+  color: red;
+  font-weight: 500;
+}
+
+
+.profileModel-notifications-container {
+  max-height: 270px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding-right: 5px;
+   scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+.profileModel-notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #F8F9FA;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.profileModel-notification-content {
+  flex: 1;
+}
+.profileModel-notification-category {
+  color: #2196F3;
+}
+.profileModel-notification-details {
+  font-size: 0.85rem;
+  color: #6C757D;
+  margin-top: 3px;
+}
+.profileModel-notification-remove-btn {
+  background: none;
+  border: none;
+  color: #6C757D;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0 5px;
+}
+.profileModel-notification-remove-btn:hover {
+  color: #DC3545;
+}
+.profileModel-no-notifications,
+.profileModel-notification-loading {
+  padding: 15px;
+  text-align: center;
+  color: #6C757D;
+  font-style: italic;
+}
+.Account_Notification {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #2196F3;
+  margin-bottom: 10px;
+}
+
+/* Tablet and smsuper desktop */
+@media only screen and (max-width: 768px) {
+  .super-navbar {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.5rem;
+    margin-top: 50px;
+  }
+  .super-nav-links {
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .super-nav-icons {
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+  }
+  .super-icon-button,
+  .super-icon-button1 {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+  }
+  .super-profile-pic {
+    width: 24px;
+    height: 24px;
+  }
+  .notification-badge {
+    width: 16px;
+    height: 16px;
+    font-size: 8px;
+  }
+  .super-tabs {
+    flex-wrap: wrap;
+    padding-left: 0.5rem;
+  }
+  .super-tab {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .notificationNav-modal-content,
+  .Account-modal-content {
+    width: 100%;
+    overflow-y: auto;
+  }
+  .notificationNav-inner-box {
+    height: auto;
+    max-height: 60vh;
+  }
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 480px) {
+  .super-navbar {
+    padding: 0.4rem;
+  }
+  .super-nav-links {
+    display: none; /* hide text links for space */
+  }
+  .super-nav-icons {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .super-icon-button,
+  .super-icon-button1 {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+  }
+  .super-profile-pic {
+    width: 20px;
+    height: 20px;
+  }
+  .notification-icon-container {
+    margin-right: auto;
+  }
+  .super-tabs {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .super-tab {
+    flex: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.3rem 0;
+  }
+  .notificationNav-inner-box,
+  .Account-inner-box {
+    padding: 1rem;
+  }
+  .notificationNav-form-group,
+  .Account-inner-notification {
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+  .logout-text {
+    font-size: 1rem;
+  }
+  .spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .super-nav-icons {
+    justify-content: flex-end; /* align super icons to the left */
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .notification-icon-container {
+    margin: 0; /* remove any auto margins */
+  }
+
+  /* rest of your mobile rules… */
+}
+/* Change Password Button & Dropdown Styles */
+.Account-top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 15px; */
+}
+
+/* .password-dropdown-container {
+  position: relative;
+  margin-left: 22rem;
+  margin-top: -0.88rem;
+}
+
+.Account-change-password-btn {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: super 0.2s;
+}
+
+.Account-change-password-btn:hover {
+  color: red;
+ 
+} */
+
+.password-dropdown {
+  position: absolute;
+  top: 2rem;
+  left: -7.55rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 100;
+  min-width: 150px;
+}
+
+.password-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.password-dropdown button:hover {
+  background-color: #f5f5f5;
+}
+
+/* Change Password Modal Styles */
+.change-password-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.change-password-modal-content {
+  background: #f1f3f6;
+  padding: 25px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+}
+
+.change-password-close-btn {
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: #777;
+}
+.change-password-close-btn:hover {
+  color: red;
+}
+.changepassword-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.changepassword-cancel-button {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.changepassword-cancel-button:hover {
+  background-color: #e0e0e0;
+}

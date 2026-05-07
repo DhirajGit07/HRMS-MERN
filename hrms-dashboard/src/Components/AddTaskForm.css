@@ -1,0 +1,494 @@
+/* Base Styles */
+.ds-task-form-container {
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.ds-task-form-header {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ds-task-form-title {
+  font-size: 28px;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 10px 0 0 10px;
+  line-height: 1.3;
+}
+
+.ds-task-form-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.ds-task-form-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.ds-task-form-section-title {
+  font-size: 18px;
+  color: #3498db;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ecf0f1;
+  font-weight: 600;
+}
+
+.ds-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ds-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.ds-form-label {
+  width: 200px;
+  padding-top: 12px;
+  font-weight: 500;
+  color: #34495e;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.ds-form-input-container {
+  flex: 1;
+  min-width: 250px;
+}
+
+.ds-form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.ds-form-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.ds-form-textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.ds-form-select {
+  width: 100%;
+  /* max-width: 1030px; */
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.ds-required-marker {
+  color: #e74c3c;
+  margin-left: 4px;
+}
+
+.ds-form-footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-top: 1px solid #e2e8f0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+  margin-top: auto;
+}
+
+.ds-form-actions {
+  display: flex;
+  gap: 15px;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.ds-btn {
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ds-btn-primary {
+  background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+
+  color: white;
+}
+
+.ds-btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(41, 128, 185, 0.3);
+}
+
+.ds-btn-primary:active {
+  transform: translateY(0);
+}
+
+.ds-btn-outline {
+  background-color: transparent;
+  color: #7f8c8d;
+  border: 1px solid #bdc3c7;
+}
+
+.ds-btn-outline:hover {
+  background-color: #f8f9fa;
+  color: #34495e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(189, 195, 199, 0.2);
+}
+
+.ds-btn-outline:active {
+  transform: translateY(0);
+}
+
+.ds-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Employee Dropdown Styles */
+.ds-employee-dropdown-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.ds-employee-dropdown-toggle {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 46px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.ds-employee-dropdown-toggle:hover {
+  border-color: #3498db;
+}
+
+.ds-dropdown-arrow {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #7f8c8d;
+  transition: transform 0.2s ease;
+}
+
+.ds-employee-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ds-employee-search-container {
+  padding: 12px;
+  border-bottom: 1px solid #ecf0f1;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+
+.ds-employee-search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.ds-employee-search-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.ds-employee-checkbox-container {
+  padding: 8px 0;
+}
+
+.ds-employee-checkbox-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.ds-employee-checkbox-item.select-all {
+  font-weight: 600;
+  border-bottom: 1px solid #ecf0f1;
+  margin-bottom: 4px;
+  background-color: #f8fafc;
+}
+
+.ds-employee-checkbox-item:hover {
+  background-color: #f1f5f9;
+}
+
+.ds-employee-checkbox-item input {
+  margin-right: 10px;
+  cursor: pointer;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.ds-no-employees-found {
+  padding: 15px;
+  color: #7f8c8d;
+  text-align: center;
+  font-size: 14px;
+}
+
+.ds-form-error {
+  color: #e74c3c;
+  background-color: #fde8e8;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c2c2;
+  font-size: 14px;
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20%,
+  60% {
+    transform: translateX(-5px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .ds-task-form-container {
+    padding: 15px;
+  }
+
+  .ds-task-form-box {
+    padding: 25px;
+  }
+
+  .ds-form-label {
+    width: 180px;
+  }
+}
+
+/* Tablet Styles (768px - 1024px) */
+@media (max-width: 1024px) {
+  .ds-task-form-title {
+    font-size: 24px;
+  }
+
+  .ds-task-form-section-title {
+    font-size: 17px;
+  }
+
+  .ds-form-row {
+    gap: 12px;
+  }
+
+  .ds-form-label {
+    width: 160px;
+    padding-top: 10px;
+  }
+
+  .ds-btn {
+    padding: 10px 20px;
+    min-width: 110px;
+  }
+}
+
+/* Small Tablet Styles (600px - 768px) */
+@media (max-width: 768px) {
+  .ds-task-form-container {
+    padding: 12px;
+    margin-top: 50px;
+  }
+
+  .ds-task-form-box {
+    padding: 20px;
+  }
+
+  .ds-form-row {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .ds-form-label {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .ds-form-input-container {
+    min-width: 100%;
+  }
+
+  .ds-form-footer {
+    padding: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .ds-form-actions {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .ds-btn {
+    flex: 1;
+    min-width: auto;
+    padding: 10px 15px;
+  }
+
+  .ds-employee-dropdown-menu {
+    max-height: 250px;
+  }
+}
+
+/* Mobile Styles (up to 600px) */
+@media (max-width: 600px) {
+  .ds-task-form-title {
+    font-size: 22px;
+  }
+
+  .ds-task-form-content {
+    padding-bottom: 80px;
+  }
+
+  .ds-form-input,
+  .ds-form-select,
+  .ds-form-textarea {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .ds-employee-dropdown-toggle {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .ds-employee-checkbox-item {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .ds-form-actions {
+    flex-direction: column;
+  }
+
+  .ds-btn {
+    width: 100%;
+  }
+}
+
+/* Small Mobile Styles (up to 400px) */
+@media (max-width: 400px) {
+  .ds-task-form-title {
+    font-size: 20px;
+  }
+
+  .ds-task-form-box {
+    padding: 15px;
+  }
+
+  .ds-form-error {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}

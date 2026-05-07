@@ -1,0 +1,618 @@
+.schedule-container {
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  color: #1e293b;
+  width: 100%;
+  height: 97vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding-bottom: 70px;
+
+}
+
+/* Toolbar */
+.shift-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f3f6;
+  padding: 12px 20px;
+  position: relative;
+}
+
+.toolbar-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-section-left-controls {
+  margin-left: 400px;
+}
+
+/* Center the date picker */
+.center-range {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.date-picker-btn {
+  background: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.date-picker-btn .fa-calendar,
+.calendar-btn {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.date-text {
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Arrow & more buttons */
+.arrow-btn,
+.more-btn {
+  background: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* View toggle */
+.view-toggle {
+  background: #e5e7eb;
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+}
+
+.view-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.view-btn.active {
+  background: white;
+  border: 1px solid #3b82f6;
+  color: #1d4ed8;
+  border-radius: 6px;
+  margin: 2px;
+}
+
+/* Assign button */
+.assign-btn {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Time row */
+.time-labels {
+  display: flex;
+  width: 100%;
+}
+
+.time-slot {
+  flex: 1;
+  padding: 12px 0;
+  text-align: center;
+  font-weight: 500;
+  border-right: 1px solid white;
+  background-color: #E5E4E2;
+  color: #4b5b6d;
+}
+
+.time-slot:last-child {
+  border-right: none;
+}
+
+/* Day entries */
+.day-entry {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: white;
+  border-top: 1px solid #e5e7eb;
+  height: 80px;
+}
+
+.day-label {
+  width: 100px;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.day-number {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.shift-box {
+  background: #FFF7E5 !important;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #475569;
+  width: 100%;
+}
+
+.shift-box-m {
+  background: #f3f4f6;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.shift-title {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+/* Modal overlay & panel */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 999;
+}
+
+.assign-modal {
+  background: white;
+  width: 600px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.close-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Modal body */
+.modal-body label {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+
+.modal-body select,
+.modal-body input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+/* Modal footer */
+.shift-modal-footer {
+  /* margin-top: auto; */
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.shift-submit-btn {
+  background: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 1rem;
+
+}
+
+.shift-cancel-btn {
+  background: #f3f4f6;
+  color: #1e293b;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Monthly View Styles */
+.monthly-view {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 10px 20px;
+  background-color: #f9fafb;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.calendar-day-name {
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.shift-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-cell.today {
+  border: 2px solid #007bff;
+  background-color: #e6f0ff;
+  border-radius: 8px;
+}
+
+.calendar-cell {
+  height: 150px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  padding: 6px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.calendar-cell.empty {
+  background-color: #f9fafb;
+}
+
+.calendar-cell.active {
+  outline: 2px solid #3b82f6;
+  border-radius: 8px;
+}
+
+.calendar-cell.weekend {
+  background-color: #FFF7E5;
+}
+
+.date-number {
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.shift-box {
+  background: #f3f4f6;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.shift-title {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.shift-time {
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+
+/* More button */
+.more-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.more-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0px 5px;
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+
+}
+
+.more-btn:hover {
+  background-color: white;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  z-index: 1000;
+  width: 180px;
+  padding: 8px 0;
+}
+
+.dropdown-item {
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  color: #1f2937;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+.total-hours-small {
+  font-size: 0.875rem;
+  color: black;
+}
+
+.weekly-total-hours {
+  font-size: 0.875rem;
+  color: black;
+  font-weight: lighter;
+  margin-left: 40rem;
+  margin-top: -0.55rem;
+
+}
+
+.clock-labels {
+  display: flex;
+  gap: 8px;
+  /* adjust spacing as needed */
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.clock-in-label,
+.clock-out-label {
+  font-size: 0.95em;
+  color: #2196F3;
+  margin-right: 4px;
+}
+
+.clock-in-time,
+.clock-out-time {
+  font-size: 0.95em;
+  color: #000;
+  /* black for actual time */
+  margin-right: 12px;
+  /* space before next label */
+}
+
+/* For monthly-specific (if you used separate container): */
+.clock-in-label-monthly,
+.clock-out-label-monthly {
+  font-size: 0.85em;
+  color: #2196F3;
+}
+
+.clock-in-time-monthly,
+.clock-out-time-monthly {
+  font-size: 0.85em;
+  color: #000;
+}
+
+
+@media (max-width: 768px) {
+  .shift-toolbar {
+    flex-direction: column;
+  }
+
+  .toolbar-section-left-controls {
+    margin-left: 0;
+  }
+
+  .shift-box {
+    max-height: 80px;
+    width: 95%;
+  }
+
+  .weekly-total-hours {
+    margin-top: 20px !important;
+    margin-left: 50px !important;
+  }
+
+  .center-range {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+  }
+
+  .date-picker-btn {
+    width: 100%;
+  }
+
+  .assign-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .day-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+
+  .day-label {
+    width: auto;
+  }
+
+  /* .time-labels {
+  } */
+  .time-slot {
+    border-right: none;
+    border-bottom: 1px solid white;
+  }
+}
+
+@media (max-width: 480px) {
+  .assign-modal {
+    width: 90%;
+  }
+
+  .modal-body label {
+    font-size: 0.8rem;
+  }
+
+  .modal-body select,
+  .modal-body input {
+    font-size: 0.8rem;
+  }
+
+  .shift-submit-btn,
+  .shift-cancel-btn {
+    padding: 6px 12px;
+  }
+
+}
+
+/* globally hide any stray horizontal scroll */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* at breakpoints where you see the scrollbar */
+@media (max-width: 768px) {
+
+  .schedule-container{
+    margin-top: 130px;
+  }
+  .date-text{
+    font-size: 0.7rem;
+  }
+
+  .schedule-container,
+  .weekly-view-container,
+  .shift-calendar-grid {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+/* ===== Enable full vertical scroll on small screens ===== */
+@media (max-width: 768px) {
+
+  .weekly-view-container,
+  .shift-calendar-grid {
+    height: auto !important;
+    max-height: 700px !important;
+    overflow-y: auto !important;
+  }
+}
+
+@media (max-width: 412px) {
+
+  .weekly-view-container,
+  .shift-calendar-grid {
+    height: auto !important;
+    max-height: 600px !important;
+    overflow-y: auto !important;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .weekly-view-container,
+  .shift-calendar-grid {
+    height: auto !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+  }
+
+    .weekly-total-hours {
+    margin-top: 10px !important;
+    margin-left: 100px !important;
+  }
+}
+
+@media (max-width: 540px) {
+
+  .weekly-view-container,
+  .shift-calendar-grid {
+    height: auto !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+  }
+}
+
+
+ @media (max-width: 820px) {
+  .weekly-total-hours {
+    margin-top: 1px !important;
+    margin-left: 150px !important;
+  }
+}
+
+ @media (max-width: 320px) {
+  .weekly-total-hours {
+    margin-bottom: 30px !important;
+    margin-left: 100px !important;
+  }
+}
+

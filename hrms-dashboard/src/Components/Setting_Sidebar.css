@@ -1,0 +1,375 @@
+/* ========== Base Layout ========== */
+.setting-page {
+  display: flex;
+  min-height: 100vh;
+  background: #F8F9FA;
+   font-family: Arial, sans-serif;
+}
+
+.settings-container {
+  flex: 1;
+  padding: 24px;
+  max-width: 1200px;
+  background-color: #eff1f5;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+  margin-bottom: 2rem;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ========== Header Card ========== */
+.header-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.app-logo img {
+  width: 54px;
+  height: 54px;
+  border-radius: 4px;
+  object-fit: contain;
+  background: #f0f0f0;
+}
+
+.app-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ========== Cards Container ========== */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.settings-card {
+  background: #ffffff;
+  flex: 1;
+  min-width: 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.settings-card-3 {
+  background: #ffffff;
+  flex: 1;
+  min-width: 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-right: 570px;
+}
+.settings-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #102E50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.settings-card-3 h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #102E50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+/* ========== Upload Groups ========== */
+.upload-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-group label {
+  font-weight: 500;
+  color: #444;
+}
+
+.upload-group input[type="file"],
+.upload-group input[type="text"] {
+  padding: 5px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fafafa;
+  transition: border 0.3s;
+  width: 50%;
+}
+
+.upload-group input[type="file"]
+ {
+  padding: 5px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fafafa;
+  transition: border 0.3s;
+  width: 50%;
+}
+.upload-group input:focus {
+  outline: none;
+  border-color: #2684ff;
+}
+
+.image-preview {
+  margin-top: 10px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 150px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+/* ========== Dashboard Preview ========== */
+.dashboard-preview {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.preview-header {
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f0f0f0;
+  min-height: 100px;
+}
+
+.preview-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.preview-header span {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.preview-content {
+  padding: 15px;
+  background: white;
+}
+
+.preview-content p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* ========== Action Buttons ========== */
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.save-button {
+   background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+  color: #ffffff;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 4rem;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+.save-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ========== Error Message ========== */
+.error-message {
+  background: #ffe0e0;
+  color: #c00;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+/* ========== Success Toast ========== */
+.save-success-toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #e6ffed;
+  color: #2e7d32;
+  padding: 16px 24px;
+  min-width: 300px;
+  max-width: 100%;
+  text-align: center;
+  border-left: 4px solid #1b5e20;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  z-index: 1000;
+}
+
+/* ========== Scrollbar ========== */
+.settings-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.settings-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.settings-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.settings-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 16px;
+    height: calc(100vh - 70px);
+  }
+  
+  .setting-page{
+    margin-top: 100px;
+  }
+  
+  .header-card {
+    padding: 16px;
+  }
+  
+  .card-row {
+    flex-direction: column;
+  }
+  
+  .settings-card {
+    width: 92%;
+  }
+  .settings-card-3 {
+    width: 92%;
+  }
+  .app-logo img {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .app-name {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-container {
+    padding: 12px;
+  }
+  
+  .header-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .settings-card {
+    width: 90%;
+  }
+  .settings-card-3 {
+    width: 90%;
+  }
+  
+  .app-logo {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .action-buttons {
+    justify-content: center;
+  }
+  
+  .save-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .settings-container {
+    padding: 10px;
+  }
+  
+  .app-logo img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .app-name {
+    font-size: 1.1rem;
+  }
+  
+  .settings-card h3 {
+    font-size: 1rem;
+  }
+  .settings-card-3 h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .settings-card {
+    width: 90%;
+  }
+  
+  .settings-card-3 {
+    width: 90%;
+    margin-right: 0;
+  }
+  
+  .card-row {
+    flex-direction: column;
+  }
+  
+  .action-buttons {
+    justify-content: end;
+  }
+}

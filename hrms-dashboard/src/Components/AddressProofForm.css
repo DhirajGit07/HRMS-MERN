@@ -1,0 +1,341 @@
+/* AddressProofForm.css */
+.ap-address-proof-container {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  padding: 20px;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ap-form-scroll-container {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 80px; /* Space for the fixed footer */
+}
+
+.ap-header h2 {
+  margin: 10px 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.ap-form-box {
+  background: #fff;
+  border-radius: 6px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.ap-section-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.ap-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.ap-form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 250px;
+}
+
+.ap-form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.ap-input-field {
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 36px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ap-form-group.ap-full-width {
+  flex: 1 0 100%;
+}
+
+.ap-required {
+  color: red;
+  margin-left: 2px;
+}
+
+.ap-form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+  left: 156px;
+  right: 0;
+  background: #fff;
+  padding: 15px 20px;
+  border-top: 1px solid #e0e0e0;
+  z-index: 100;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.ap-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.ap-btn.ap-blue {   background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+background-color: #007bff;
+  color: white;
+}
+
+.ap-btn.ap-blue:hover {
+  background-color: #0069d9;
+}
+
+.ap-btn.ap-gray {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.ap-btn.ap-gray:hover {
+  background-color: #e0e0e0;
+}
+
+.ap-readonly-field {
+  padding: 8px 12px;
+  font-size: 14px;
+  height: 36px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.ap-subsection-title {
+  font-size: 15px;
+  margin: 15px 0 10px;
+  font-weight: 500;
+  color: #444;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.ap-error {
+  color: #d93025;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+  font-weight: 500;
+}
+
+.ap-error::before {
+  content: "⚠️ ";
+  margin-right: 4px;
+}
+
+.loading-message,
+.error-message {
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #d93025;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 540px) {
+  .ap-address-proof-container {
+    padding: 15px;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .ap-form-scroll-container {
+    flex: 1;
+    padding-bottom: 100px;
+  }
+
+    /* .ap-form-box {
+      min-height: min-content;
+    } */
+
+  .ap-form-actions {
+    left: 0;
+    padding: 10px 15px;
+    bottom: 0;
+    width: 100%;
+     flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 12px;  
+  }
+}
+
+@media (max-width: 768px) {
+  .ap-address-proof-container {
+    padding: 12px;
+    margin-top: 50px;
+  }
+
+  .ap-form-scroll-container {
+    padding-bottom: 90px;
+    overflow-y: auto;
+
+  }
+
+  .ap-form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .ap-form-group {
+    min-width: 100%;
+  }
+
+  /* Address change section specific styles */
+  .ap-form-box {
+    padding-bottom: 20px;
+    overflow-y: auto;
+    height: 75vh;
+  }
+
+  .ap-form-actions {
+    flex-wrap: wrap;
+    gap: 8px;
+    left: 0;
+    padding: 10px 15px;
+    bottom: 0;
+    width: 100%;
+     flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 12px;  
+  }
+
+  .ap-btn {
+    min-width: calc(50% - 4px);
+  }
+}
+
+@media (max-width: 480px) {
+  .ap-address-proof-container {
+    padding: 10px;
+  }
+
+  .ap-form-scroll-container {
+    padding-bottom: 80px;
+  }
+
+  /* Ensure address fields don't overflow */
+  .ap-form-box {
+    min-width: 280px;
+    /* overflow: visible; */
+    overflow-y: auto;
+    height: 70vh;
+  }
+
+  .ap-input-field {
+    width: 100%;
+  }
+
+  .ap-form-actions {
+    padding: 8px 10px;
+  }
+
+  .ap-btn {
+    min-width: 100%;
+  }
+}
+
+/* Special handling for very small devices */
+@media (max-width: 360px) {
+  .ap-form-scroll-container {
+    padding-bottom: 120px;
+  }
+
+  .ap-form-box {
+    overflow-y: auto;
+    height: 70vh;
+  }
+
+  /* Adjust spacing for address fields */
+  .ap-form-row {
+    margin-bottom: 12px;
+  }
+
+  .ap-subsection-title {
+    margin-top: 10px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 480px) and (orientation: landscape) {
+  .ap-address-proof-container {
+    height: 100vh;
+  }
+
+  .ap-form-scroll-container {
+    max-height: 65vh;
+    overflow-y: auto;
+  }
+
+  /* Compress form elements in landscape */
+  .ap-form-row {
+    margin-bottom: 10px;
+  }
+
+  .ap-input-field {
+    padding: 6px 8px;
+    height: 32px;
+  }
+}
+
+/* Special case for iPhone 5/SE */
+@media (max-width: 320px) {
+  .ap-form-scroll-container {
+    padding-bottom: 130px;
+  }
+
+  .ap-form-box {
+    padding: 12px;
+  }
+
+  /* Reduce spacing for very small screens */
+  .ap-form-row {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .ap-input-field {
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+

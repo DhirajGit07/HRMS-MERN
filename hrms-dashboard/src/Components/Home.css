@@ -1,0 +1,2834 @@
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, sans-serif;
+  /* overflow:auto; */
+}
+
+.home-main-container {
+  overflow: auto;
+  height: 100vh;
+}
+
+.Home-header-image {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.clockin-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.strict-timings-dropdown-arrow {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.clockin-root {
+  position: relative;
+  height: 70vh;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clockin-date-time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.clockin-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.clockin-field {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.clockin-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.clockin-field select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.clockin-cross {
+  cursor: pointer;
+  font: bolder;
+  font-weight: 1000;
+  font-size: 22px;
+}
+
+.clockin-buttons {
+  position: absolute;
+  bottom: 0px;
+  right: 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 16px 0px;
+  width: 95%;
+  border-top: 2px solid #ddd9d9;
+  box-sizing: border-box;
+
+}
+
+.clockin-root-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd9d9;
+}
+
+.clockin-date-time-format {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.clockin-shift {
+  background-color: #99c7f1;
+  padding: 6px;
+  border-radius: 6px;
+  color: white;
+  font: bold;
+  font-weight: 900;
+}
+
+.clockin-cancel-btn,
+.clockin-clockin-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.clockin-cancel-btn {
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.clockin-cancel-btn:hover {
+  background: #eaeaea;
+}
+
+.clockin-clockin-btn {
+  background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+  color: white;
+}
+
+.clockin-cancel-btn:hover,
+.clockin-clockin-btn:hover {
+  opacity: 0.9;
+}
+
+.home-top-right-button {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  padding: 8px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.home-top-right-button:hover {
+  background-color: #f8fcff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #7371ff;
+}
+
+.home-modal-overlay {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: 280px;
+  height: auto;
+  /* background: rgba(0, 0, 0, 0.3); */
+  display: flex;
+  align-items: right;
+  /* padding-right: 50rem; */
+  /* justify-content: flex-start; */
+  z-index: 100;
+}
+
+.home-menu-modal {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+
+  position: absolute;
+  top: 50px;
+  left: 8rem;
+
+  top: 9rem;
+  z-index: 999;
+}
+
+
+/* .modal-title {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+} */
+
+.home-modal-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-modal-options li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.home-modal-options li:hover {
+  background-color: #f0f0f0;
+}
+
+.home-close-button {
+  position: absolute;
+  top: 8px;
+  right: 24px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Home-profile-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: -40px 20px auto 15px;
+
+}
+
+.Home-profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin: -70px auto 15px auto;
+  border-radius: 50%;
+}
+
+.home-user-id {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.home-user-name {
+  /* font-weight: bold; */
+  font-size: 15px;
+
+
+}
+
+.home-user-role {
+  color: #555;
+  margin-bottom: 5px;
+  font-size: 13px;
+  margin-top: 0.55rem;
+}
+
+.home-user-empid {
+  color: black;
+  opacity: 0.1;
+  font-size: 11px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.home-time-display {
+  font-size: 14px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.home-time-part {
+  /* background: #f0f0f0; */
+  padding: 5px 8px;
+  border-radius: 5px;
+
+}
+
+.home-time-separator {
+  padding: 5px 0;
+}
+
+.home-check-in-button {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: 2px solid #2196f3;
+  padding: 8px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.home-main-panel {
+  flex: 1;
+  min-width: 300px;
+  max-height: calc(100vh - 150px);
+  /* overflow-y: auto; */
+}
+
+/* Acctive links */
+.home-nav-tabs {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 8px;
+  z-index: 99999;
+  padding: 20px;
+  margin: -28px 20px 10px auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.home-tab-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex: 1;
+}
+
+.home-tab {
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #111;
+}
+
+.home-tab svg {
+  font-size: 16px;
+}
+
+.home-tab.active {
+  border-bottom: 2px solid #007bff;
+  font-weight: 600;
+  color: #007bff;
+  /* max-height: max-content; */
+}
+
+.home-settings-icon {
+  margin-left: auto;
+  padding-left: 10px;
+}
+
+.demo-banner {
+  background: #a061f6;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 20px 10px auto;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.demo-text {
+  max-width: 70%;
+}
+
+.demo-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.demo-subtitle {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.request-demo-btn {
+  background-color: #ff3d00;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.home-morning-greeting {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  margin: 20px 20px 10px auto;
+}
+
+.hrms-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 15%;
+}
+
+.home-greeting-text {
+  flex: 2;
+}
+
+.home-good-morning {
+  margin: 0;
+  font-size: 15px;
+}
+
+.home-greeting-name {
+  /* font-weight: bold; */
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.home-day-wish {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #2196F3;
+}
+
+/* ******scrolling********** */
+.home-scrollable-section {
+  max-height: 445px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #989898 #f1f1f1;
+}
+
+.home-scrollable-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.home-scrollable-section::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.home-scrollable-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+
+/* work-schedule */
+.home-check-in-reminder {
+  display: flex;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  margin: 20px 20px 10px auto;
+}
+
+.home-check-in-icon {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+home-.check-in-content p {
+  margin: 3px 0;
+}
+
+.home-reminder-text {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 0.15rem;
+}
+
+.home-reminder-detail {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 0.15rem;
+}
+
+.home-reminder-time {
+  font-size: 14px;
+  color: #2196F3;
+}
+
+/* work style */
+.home-work-schedule-extended {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 20px 10px auto;
+  margin-bottom: 4rem;
+}
+
+.home-work-schedule-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home-schedule-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.home-section-title.home-colored-title {
+  color: #102E50;
+  margin: 0;
+}
+
+.home-schedule-dates {
+  font-size: 14px;
+  color: #444;
+  margin-top: 2px;
+}
+
+.home-shift-box {
+  background: #f7f7f7;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.03);
+}
+
+.home-shift-time {
+  color: #2196F3;
+}
+
+.home-week-timeline {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+.home-time-display {
+  font-size: 16px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.home-day-status {
+  text-align: center;
+  flex: 1;
+}
+
+.home-day-label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.home-day-date {
+  display: inline-block;
+  font-weight: 600;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.home-highlight-date {
+  background-color: #007bff;
+  color: white;
+}
+
+.home-status-label {
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Specific Status Styles */
+.status-label.absent {
+  color: #e53935;
+}
+
+.status-label.weekend {
+  color: #fb8c00;
+}
+
+.status-label.today {
+  font-weight: bold;
+}
+
+/* reportees */
+
+/* .home-reportees-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 245px;
+  height: 170px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+} */
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, sans-serif;
+  /* overflow:auto; */
+}
+
+.Home-header-image {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-top-right-button {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  padding: 8px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.home-top-right-button:hover {
+  background-color: #f8fcff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #7371ff;
+}
+
+.home-modal-overlay {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: 280px;
+  height: auto;
+  /* background: rgba(0, 0, 0, 0.3); */
+  display: flex;
+  align-items: right;
+  /* padding-right: 50rem; */
+  /* justify-content: flex-start; */
+  z-index: 100;
+}
+
+.home-menu-modal {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+
+  position: absolute;
+  top: 50px;
+  left: 8rem;
+
+  top: 9rem;
+  z-index: 999;
+}
+
+
+/* .modal-title {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+} */
+
+.home-modal-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-modal-options li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.home-modal-options li:hover {
+  background-color: #f0f0f0;
+}
+
+.home-close-button {
+  position: absolute;
+  top: 8px;
+  right: 24px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Home-profile-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: -40px 20px auto 15px;
+
+}
+
+.Home-profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin: -70px auto 15px auto;
+  border-radius: 50%;
+}
+
+.home-user-id {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0%;
+}
+
+.home-user-name {
+  /* font-weight: bold; */
+  font-size: 15px;
+
+
+}
+
+.home-user-role {
+  color: #555;
+  margin-bottom: 5px;
+  font-size: 13px;
+  margin-top: 0.55rem;
+}
+
+.home-user-empid {
+  color: black;
+  opacity: 0.1;
+  font-size: 11px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.home-time-display {
+  font-size: 14px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.home-time-part {
+  /* background: #f0f0f0; */
+  padding: 5px 8px;
+  border-radius: 5px;
+
+}
+
+.home-time-separator {
+  padding: 5px 0;
+}
+
+.home-check-in-button {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: 2px solid #2196f3;
+  padding: 8px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.home-main-panel {
+  flex: 1;
+  min-width: 300px;
+  max-height: calc(100vh - 150px);
+  /* overflow-y: auto; */
+}
+
+/* Acctive links */
+.home-nav-tabs {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 8px;
+  z-index: 99999;
+  padding: 20px;
+  margin: -28px 20px 10px auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.home-tab-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex: 1;
+}
+
+.home-tab {
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #111;
+}
+
+.home-tab svg {
+  font-size: 16px;
+}
+
+.home-tab.active {
+  border-bottom: 2px solid #007bff;
+  font-weight: 600;
+  color: #007bff;
+  /* max-height: max-content; */
+}
+
+.home-settings-icon {
+  margin-left: auto;
+  padding-left: 10px;
+}
+
+.demo-banner {
+  background: #a061f6;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 20px 10px auto;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.demo-text {
+  max-width: 70%;
+}
+
+.demo-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.demo-subtitle {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.request-demo-btn {
+  background-color: #ff3d00;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.home-morning-greeting {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  margin: 20px 20px 10px auto;
+}
+
+.hrms-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 15%;
+}
+
+.home-greeting-text {
+  flex: 2;
+}
+
+.home-good-morning {
+  margin: 0;
+  font-size: 15px;
+}
+
+.home-greeting-name {
+  /* font-weight: bold; */
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.home-day-wish {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #2196F3;
+}
+
+/* ******scrolling********** */
+.home-scrollable-section {
+  max-height: 445px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #989898 #f1f1f1;
+}
+
+.home-scrollable-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.home-scrollable-section::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.home-scrollable-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+
+/* work-schedule */
+.home-check-in-reminder {
+  display: flex;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  margin: 20px 20px 10px auto;
+}
+
+.home-check-in-icon {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+home-.check-in-content p {
+  margin: 3px 0;
+}
+
+.home-reminder-text {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 0.15rem;
+}
+
+.home-reminder-detail {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 0.15rem;
+}
+
+.home-reminder-time {
+  font-size: 14px;
+  color: #2196F3;
+}
+
+/* work style */
+.home-work-schedule-extended {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 20px 10px auto;
+  margin-bottom: 4rem;
+}
+
+.home-work-schedule-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home-schedule-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.home-section-title.home-colored-title {
+  color: #102E50;
+  margin: 0;
+}
+
+.home-schedule-dates {
+  font-size: 14px;
+  color: #444;
+  margin-top: 2px;
+}
+
+.home-shift-box {
+  background: #f7f7f7;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.03);
+}
+
+.home-shift-time {
+  color: #2196F3;
+}
+
+.home-week-timeline {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+.home-time-display {
+  font-size: 16px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.home-day-status {
+  text-align: center;
+  flex: 1;
+}
+
+.home-day-label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.home-day-date {
+  display: inline-block;
+  font-weight: 600;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.home-highlight-date {
+  background-color: #007bff;
+  color: white;
+}
+
+.home-status-label {
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Specific Status Styles */
+.status-label.absent {
+  color: #e53935;
+}
+
+.status-label.weekend {
+  color: #fb8c00;
+}
+
+.status-label.today {
+  font-weight: bold;
+}
+
+/* reportees */
+
+.home-reportees-card {
+  background: white;
+  border-radius: 10px;
+  padding: 0px 0px 0px 14px;
+  width: 275px;
+  height: 185px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.home-reportee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 130px;
+  margin-bottom: 2rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #C1C1C1 #F1F1F1;
+}
+
+.reportee-card {
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  transition: background 0.3s ease;
+}
+
+.reportee-card:hover {
+  background-color: #e8f0fe;
+}
+
+.reportee-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #333;
+}
+
+.reportee-role {
+  color: #0073e6;
+  font-weight: 500;
+}
+
+.reportee-email {
+  font-size: 13px;
+  color: #555;
+}
+
+.reportee-employeeid {
+  font-size: 5px;
+  color: #ffffff;
+}
+
+
+/* Dropdown */
+.more-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  /* places it below the nav */
+  right: 20px;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background-color: #6a2424;
+}
+
+.home-current-day.normal {
+  color: #555;
+}
+
+
+.home-week-navigation {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.home-week-nav-btn {
+  background: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.home-week-nav-btn:hover {
+  background: #E0E0E0;
+}
+
+.home-loading-shift {
+  padding: 16px;
+  text-align: center;
+  color: #666;
+}
+
+.home-status-label.present {
+  color: #4CAF50;
+  font-weight: 500;
+}
+
+.home-status-label.half-day {
+  color: #FF9800;
+  font-weight: 500;
+}
+
+.home-status-label.weekend {
+  color: #F44336;
+  font-weight: 500;
+}
+
+.home-status-label.today {
+  color: #2196F3;
+  font-weight: 500;
+}
+
+
+
+.home-header-datetime {
+  position: absolute;
+  top: 7rem;
+  right: 1.5rem;
+  /* background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%); */
+  color: black;
+  padding: 4px 11px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+
+  font-weight: 400;
+  text-align: right;
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25); */
+  /* transition: all 0.3s ease-in-out; */
+  cursor: default;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  color: black;
+}
+
+.home-header-datetime:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  color: black;
+  transform: translateY(-2px) scale(1.03);
+}
+
+
+
+@media (max-width: 540px) {
+  .home-header-datetime {
+    width: 180px;
+    /* top: 6rem; */
+    margin-top: 80px !important;
+    right: 1rem;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-header-datetime {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    /* padding: 0 15px; */
+  }
+
+  .left-panel {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .Home-profile-card,
+  .home-reportees-card {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  /* .main-panel {
+    width: 100%;
+    margin: 0 auto;
+  } */
+  .home-scrollable-section {
+    min-height: 400px;
+    max-height: 450px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #989898 #f1f1f1;
+  }
+
+  .home-main-panel {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .home-nav-tabs,
+  .demo-banner,
+  .home-morning-greeting,
+  .home-check-in-reminder,
+  .home-work-schedule-extended {
+    width: 90%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  .home-header-datetime {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Home-header-image {
+    margin-top: 134px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Home-header-image {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 129px;
+  }
+
+  .home-main-panel {
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+
+  .Home-profile-image {
+    width: 100px;
+    height: 100px;
+    /* margin-top: -40px; */
+  }
+
+  .top-right-button {
+    top: 115px;
+    right: 10px;
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .user-id,
+  .user-name {
+    font-size: 16px;
+  }
+
+  .user-role,
+  .demo-subtitle,
+  .day-wish,
+  .reminder-detail,
+  .reminder-time {
+    font-size: 13px;
+  }
+
+  .time-display {
+    font-size: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .check-in-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .tab {
+    font-size: 14px;
+  }
+
+  .demo-title,
+  .good-morning {
+    font-size: 16px;
+  }
+
+  .hrms-logo,
+  .check-in-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .more-dropdown {
+    max-width: 150px;
+    width: 100%;
+    right: 10px;
+    justify-content: end;
+    align-items: end;
+  }
+
+  .dropdown-item {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Home-header-image {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 129px;
+  }
+
+  .home-main-panel {
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+
+  .Home-profile-image {
+    width: 80px;
+    height: 80px;
+    margin-top: -50px;
+  }
+
+  .home-user-id,
+  .home-user-name {
+    font-size: 14px;
+  }
+
+  .home-user-role,
+  .home-user-empid {
+    font-size: 12px;
+  }
+
+  .home-check-in-button {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+
+  .hrms-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+  }
+
+  .top-right-button {
+    top: 115px;
+    right: 8px;
+    font-size: 11px;
+    padding: 6px 7px;
+  }
+
+  .Home-profile-card,
+  .home-reportees-card,
+  .home-nav-tabs,
+  .demo-banner,
+  .home-morning-greeting,
+  .home-check-in-reminder,
+  .home-work-schedule-extended {
+    padding: 10px;
+    width: auto;
+    margin: 10px 10px 0px 10px;
+  }
+
+  .tab {
+    font-size: 12px;
+  }
+
+  .time-display {
+    font-size: 14px;
+  }
+
+  .more-dropdown {
+    max-width: 150px;
+    width: 100%;
+    right: 10px;
+    justify-content: end;
+    align-items: end;
+
+  }
+
+  .dropdown-item {
+    font-size: 12px;
+  }
+
+  .home-settings-dropdown {
+    max-width: 175px;
+    width: 100%;
+    right: 10px;
+    top: 45px;
+    justify-content: end;
+    align-items: end;
+    min-height: 150px;
+    max-height: 160px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #989898 #f1f1f1;
+  }
+
+  .home-scrollable-section {
+    max-height: 350px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #989898 #f1f1f1;
+  }
+}
+
+.home-check-in-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+/* .home-check-in-button:hover {
+  background-color: #;
+} */
+
+.home-check-in-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  margin: 1px;
+}
+
+.home-check-in-button.clocked-in {
+  background-color: #f44336;
+}
+
+.home-check-in-button.clocked-in:hover {
+  background-color: #d32f2f;
+}
+
+.home-time-display {
+  font-size: 24px;
+  font-family: monospace;
+  margin: 10px 0;
+}
+
+.home-time-part {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+.home-time-separator {
+  margin: 0 2px;
+}
+
+.disabled-button {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.home-reportee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 125px;
+  margin-bottom: 2rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #C1C1C1 #F1F1F1;
+}
+
+.reportee-card {
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
+}
+
+.reportee-card:hover {
+  background-color: #e8f0fe;
+}
+
+.reportee-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #333;
+}
+
+.reportee-role {
+  color: #0073e6;
+  font-weight: 500;
+}
+
+.reportee-email {
+  font-size: 13px;
+  color: #555;
+}
+
+.reportee-employeeid {
+  font-size: 5px;
+  color: #ffffff;
+}
+
+
+/* Dropdown */
+.more-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  /* places it below the nav */
+  right: 20px;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background-color: #6a2424;
+}
+
+.Home-navdiv {
+  position: relative;
+}
+
+.home-settings-dropdown {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 200px;
+  height: 390px;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 450px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #989898 #F1F1F1;
+}
+
+.home-settings-dropdown .home-dropdown-item {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.home-settings-dropdown .home-dropdown-item:hover {
+  background-color: #F0F0F0;
+}
+
+.homeswitch-disabled {
+  position: relative;
+  display: inline-block;
+  right: 10px;
+  font-size: 20px;
+  float: right;
+  /* Align to right side */
+}
+
+/* Toggle switch container */
+.home-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  float: right;
+  /* Align to right side */
+}
+
+.home-switch-disabled {
+  position: relative;
+  display: inline-block;
+  right: 10px;
+  font-size: 20px;
+  float: right;
+  /* Align to right side */
+}
+
+/* Hide default checkbox */
+.home-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.home-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 22px;
+}
+
+.home-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Toggle ON */
+input:checked+.home-slider {
+  background-color: #2196F3;
+}
+
+input:checked+.home-slider:before {
+  transform: translateX(18px);
+}
+
+.logout-item {
+  color: red;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.logout-item:hover {
+  color: darkred;
+}
+
+.home-current-day {
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.home-current-day.red {
+  color: red;
+}
+
+.home-current-day.normal {
+  color: #555;
+}
+
+
+.home-week-navigation {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.home-week-nav-btn {
+  background: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.home-week-nav-btn:hover {
+  background: #E0E0E0;
+}
+
+.home-loading-shift {
+  padding: 16px;
+  text-align: center;
+  color: #666;
+}
+
+.home-status-label.present {
+  color: #4CAF50;
+  font-weight: 500;
+}
+
+.home-status-label.half-day {
+  color: #FF9800;
+  font-weight: 500;
+}
+
+.home-status-label.weekend {
+  color: #F44336;
+  font-weight: 500;
+}
+
+.home-status-label.today {
+  color: #2196F3;
+  font-weight: 500;
+}
+
+
+
+.home-header-datetime {
+  position: absolute;
+  top: 7rem;
+  right: 1.5rem;
+  /* background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%); */
+  color: black;
+  padding: 4px 11px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+
+  font-weight: 400;
+  text-align: right;
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25); */
+  /* transition: all 0.3s ease-in-out; */
+  cursor: default;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  color: black;
+}
+
+.home-header-datetime:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  color: black;
+  transform: translateY(-2px) scale(1.03);
+}
+
+
+
+@media (max-width: 540px) {
+  .home-header-datetime {
+    width: 180px;
+    /* top: 6rem; */
+    margin-top: 80px !important;
+    right: 1rem;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-header-datetime {
+    /* width: 100px;
+    margin-top: 30px !important;
+    right: 1rem;
+    padding: 2px 10px;
+    font-size: 0.9rem; */
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    /* padding: 0 15px; */
+  }
+
+  .left-panel {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .Home-profile-card,
+  .home-reportees-card {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  /* .main-panel {
+    width: 100%;
+    margin: 0 auto;
+  } */
+  .home-scrollable-section {
+    min-height: 400px;
+    max-height: 450px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #989898 #f1f1f1;
+  }
+
+  .home-main-panel {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    max-height: max-content;
+  }
+
+  .home-nav-tabs,
+  .demo-banner,
+  .home-morning-greeting,
+  .home-check-in-reminder,
+  .home-work-schedule-extended {
+    width: 90%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Home-header-image {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home-main-panel {
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+
+  .Home-profile-image {
+    width: 100px;
+    height: 100px;
+    /* margin-top: -40px; */
+  }
+
+  .top-right-button {
+    top: 115px;
+    right: 10px;
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .user-id,
+  .user-name {
+    font-size: 16px;
+  }
+
+  .user-role,
+  .demo-subtitle,
+  .day-wish,
+  .reminder-detail,
+  .reminder-time {
+    font-size: 13px;
+  }
+
+  .time-display {
+    font-size: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .check-in-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .tab {
+    font-size: 14px;
+  }
+
+  .demo-title,
+  .good-morning {
+    font-size: 16px;
+  }
+
+  .hrms-logo,
+  .check-in-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .more-dropdown {
+    max-width: 150px;
+    width: 100%;
+    right: 10px;
+    justify-content: end;
+    align-items: end;
+  }
+
+  .dropdown-item {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Home-header-image {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home-main-panel {
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+
+  .Home-profile-image {
+    width: 80px;
+    height: 80px;
+    margin-top: -50px;
+  }
+
+  .home-user-id,
+  .home-user-name {
+    font-size: 14px;
+  }
+
+  .home-user-role,
+  .home-user-empid {
+    font-size: 12px;
+  }
+
+  .home-check-in-button {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+
+  .hrms-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+  }
+
+  .top-right-button {
+    top: 115px;
+    right: 8px;
+    font-size: 11px;
+    padding: 6px 7px;
+  }
+
+  .Home-profile-card,
+  .home-reportees-card,
+  .home-nav-tabs,
+  .demo-banner,
+  .home-morning-greeting,
+  .home-check-in-reminder,
+  .home-work-schedule-extended {
+    padding: 10px;
+    width: auto;
+    margin: 10px 10px 0px 10px;
+  }
+
+  .tab {
+    font-size: 12px;
+  }
+
+  .time-display {
+    font-size: 14px;
+  }
+
+  .more-dropdown {
+    max-width: 150px;
+    width: 100%;
+    right: 10px;
+    justify-content: end;
+    align-items: end;
+
+  }
+
+  .dropdown-item {
+    font-size: 12px;
+  }
+
+  .home-settings-dropdown {
+    max-width: 175px;
+    width: 100%;
+    right: 10px;
+    top: 45px;
+    justify-content: end;
+    align-items: end;
+    min-height: 150px;
+    max-height: 160px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #989898 #f1f1f1;
+  }
+
+  .home-scrollable-section {
+    max-height: 350px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #989898 #f1f1f1;
+  }
+}
+
+.home-check-in-button {
+  background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.home-check-out-button {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+
+}
+
+/* .home-check-in-button:hover {
+  background-color: #;
+} */
+
+.home-check-in-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.home-check-in-button.clocked-in {
+  background-color: #f44336;
+}
+
+.home-check-in-button.clocked-in:hover {
+  background-color: #d32f2f;
+}
+
+.home-time-display {
+  font-size: 24px;
+  font-family: monospace;
+  margin: 10px 0;
+}
+
+.home-time-part {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+.home-time-separator {
+  margin: 0 2px;
+}
+
+.disabled-button {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #cccccc;
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdown-selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.dropdown-options-input {
+  width: 97%;
+  border-radius: 4px;
+  padding: 2.5px;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: 20vh;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.dropdown-options li {
+  padding: 8px;
+  cursor: pointer;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.dropdown-options li:hover {
+  background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .adco-flex {
+    flex-direction: column;
+  }
+
+  .adco-root {
+    width: 70%;
+    /* height: 80%; */
+  }
+
+  .adco-modal-overlay {}
+}
+
+
+
+.clockin-custom-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+
+.clockin-custom-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.clockin-save-btn {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clockin-save-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.dropdown-option-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.dropdown-option-item span {
+  width: 100%;
+}
+
+.dropdown-delete-btn {
+  padding: 4px;
+  color: #f44336;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.dropdown-delete-btn:hover {
+  background-color: #f6c9c9;
+}
+
+@media (max-width: 897px) {
+  .clockin-root {
+    /* overflow-y: auto; */
+    height: 85vh;
+    width: 80%;
+  }
+  .clockin-middle-root {
+    overflow-y: auto;
+    height: 60vh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 933px) {
+  .clockin-root {
+    /* overflow-y: auto; */
+    height: 85vh;
+    width: 85%;
+  }
+  .clockin-middle-root {
+    overflow-y: auto;
+    height: 60vh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 883px) {
+  .clockin-root {
+    /* overflow-y: auto; */
+    height: 85vh;
+    width: 85%;
+  }
+  .clockin-middle-root {
+    overflow-y: auto;
+    height: 52\vh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .clockin-root {
+    /* overflow-y: auto; */
+    height: 85vh;
+    width: 80%;
+  }
+
+  .clockin-middle-root {
+    overflow-y: auto;
+    height: 55vh;
+    width: 100%;
+  }
+
+  .clockin-buttons {
+    position: absolute;
+    bottom: 10px;
+    right: 16px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    padding: 16px 0px;
+    width: 95%;
+    border-top: 2px solid #ddd9d9;
+    box-sizing: border-box;
+
+  }
+
+  .clockin-form {
+    flex-direction: row;
+  }
+
+  .clockin-date-time {
+    flex-direction: column;
+  }
+
+  .clockin-date-time-format {
+    font-size: 14px;
+  }
+
+  .clockin-shift {
+    margin-top: 6px;
+  }
+}
+
+
+/* Modal overlay (overlay becomes the scrolling container to avoid re-centering) */
+.adco-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  /* don't auto-recenter while user scrolls — let overlay scroll */
+  align-items: flex-start;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1000;
+  padding: 24px 12px;
+  box-sizing: border-box;
+}
+
+/* Main container (modal) */
+.adco-root {
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  width: 700px;
+  max-width: calc(100% - 48px);
+  /* responsive */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f1f3f6;
+  color: #333;
+
+  /* keep modal layout stable: header, scrollable content, footer */
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  /* leave breathing room top/bottom */
+  margin: 0 auto;
+  /* center horizontally */
+  box-sizing: border-box;
+  overflow: hidden;
+  /* content area will handle scrolling */
+}
+
+/* Header (kept inside modal) */
+.clockin-root-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Content area: flexible and scrollable */
+.adco-flex {
+  display: flex;
+  gap: 16px;
+  border-top: 2px solid #ccc;
+  padding-top: 16px;
+
+  /* make content area scroll inside the modal */
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding-right: 8px;
+  /* avoid content hiding behind scrollbar on some devices */
+  box-sizing: border-box;
+}
+
+/* Panels */
+.adco-panel {
+  flex: 1;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Date / Times */
+.adco-date {
+  font-size: 16px;
+}
+
+.adco-clockin-time {
+  font-size: 16px;
+}
+
+.adco-time-section,
+.adco-activity-section {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Circle timer */
+.adco-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 6px solid #2490ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px auto;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+/* Current time box */
+.adco-current-time {
+  margin-top: 8px;
+  border: 2px solid #ccc;
+  padding: 16px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Activity section */
+.adco-activity-title {
+  font-size: 16px;
+}
+
+.adco-clockin-icon,
+.adco-clockout-icon {
+  color: #2490ef;
+  font-weight: 700;
+}
+
+.adco-shift-badge {
+  background: #99c7f1;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+
+/* Activity rows */
+.adco-activity-time,
+.adco-clockout-missing {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 20px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+/* Clock-in mini card */
+.adco-time-section-clockin-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  border: 2px solid #ccc;
+  padding: 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Bottom buttons (kept in normal flow, not absolutely positioned) */
+.adco-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 16px;
+  border-top: 2px solid #ccc;
+  padding-top: 16px;
+
+  /* ensure buttons area is always visible and doesn't trigger reflow jumps */
+  flex-shrink: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* Buttons */
+.adco-cancel-btn {
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.adco-cancel-btn:hover {
+  background: #eaeaea;
+}
+
+.adco-clockout-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: px 20px;
+  background: #de2828;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.adco-clockout-btn:hover {
+  background: #c42424;
+}
+
+/* .adco-cancel-btn:hover { background: #f5f5f5; } */
+
+/* small adjustments for circle label layout */
+.adco-circle-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 14px;
+  font-size: 16px;
+}
+
+/* =====================
+   Responsive media rules
+   (portrait + landscape phone handling)
+   ===================== */
+
+/* Extra-small phones - narrow portrait phones */
+@media (max-width: 480px) and (orientation: portrait) {
+  .adco-modal-overlay {
+    padding: 12px;
+  }
+
+  .adco-root {
+    width: calc(100% - 24px);
+    padding: 16px;
+    border-radius: 6px;
+    max-height: calc(100vh - 32px);
+  }
+
+  .adco-flex {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .adco-panel {
+    padding: 12px;
+  }
+
+  .adco-circle {
+    width: 100px;
+    height: 100px;
+    margin: 12px auto;
+  }
+
+  .adco-current-time,
+  .adco-time-section-clockin-time {
+    padding: 12px;
+  }
+
+  .adco-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    padding-top: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .adco-cancel-btn,
+  .adco-clockout-btn {
+    flex: 1 1 48%;
+    min-width: 120px;
+    box-sizing: border-box;
+  }
+}
+
+/* Landscape phones / short-height viewports */
+@media (max-width: 812px) and (orientation: landscape),
+(max-height: 420px) and (orientation: landscape) {
+  .adco-modal-overlay {
+    padding: 8px;
+    align-items: center;
+    /* align center vertically when there's enough space */
+  }
+
+  .adco-root {
+    width: calc(100% - 16px);
+    padding: 14px;
+    max-height: calc(100vh - 16px);
+  }
+
+  /* stack panels vertically so each gets enough width */
+  .adco-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .adco-panel {
+    padding: 12px;
+  }
+
+  /* Keep the buttons visible without absolute/sticky that causes jumps.
+     If you prefer a sticky footer effect, uncomment sticky rules below. */
+  .adco-buttons {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-end;
+    gap: 12px;
+    overflow-x: auto;
+    /* allow horizontal scrolling if needed */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+
+  .adco-cancel-btn,
+  .adco-clockout-btn {
+    flex: 1 1 48%;
+    min-width: 120px;
+    box-sizing: border-box;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  .adco-root {
+    width: calc(100% - 32px);
+    padding: 18px;
+    max-height: calc(100vh - 32px);
+  }
+
+  .adco-flex {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .adco-panel {
+    padding: 14px;
+  }
+
+  .adco-circle {
+    width: 110px;
+    height: 110px;
+    margin: 14px auto;
+  }
+
+  .adco-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: flex-end;
+    padding-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .adco-cancel-btn,
+  .adco-clockout-btn {
+    min-width: 140px;
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* Extra-safe rule for very short viewports (prevents overlap) */
+@media (max-height: 420px) {
+  .adco-root {
+    max-height: calc(100vh - 12px);
+  }
+
+  .adco-buttons {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .adco-cancel-btn,
+  .adco-clockout-btn {
+    flex: 1 1 48%;
+    min-width: 110px;
+    box-sizing: border-box;
+  }
+}
+
+/* Very narrow phones */
+@media (max-width: 360px) {
+
+  .adco-cancel-btn,
+  .adco-clockout-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .adco-circle {
+    width: 92px;
+    height: 92px;
+    font-size: 16px;
+  }
+}
+
+/* Small aesthetic helpers (keep focus from scrolling the page) */
+.adco-root:focus {
+  outline: none;
+}
+
+/* Force buttons to stay in a single row and allow horizontal scroll on very narrow screens */
+.adco-buttons {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-end;
+  gap: 16px;
+  overflow-x: auto;
+  /* allow horizontal scrolling if needed */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+
+/* Prevent buttons from shrinking too small */
+.adco-buttons .adco-cancel-btn,
+.adco-buttons .adco-clockout-btn {
+  flex: 0 0 auto;
+  /* do not grow or shrink */
+  min-width: 110px;
+  /* adjust if you want wider/narrower buttons */
+}
+
+/* Optional: small visual scrollbar styling (keeps UI tidy) */
+.adco-buttons::-webkit-scrollbar {
+  height: 6px;
+}
+
+.adco-buttons::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 3px;
+}
+
+/* Reduce gap and button min-width on very narrow screens to avoid unnecessary scroll */
+@media (max-width: 420px) {
+  .adco-buttons {
+    gap: 8px;
+  }
+
+  .adco-buttons .adco-cancel-btn,
+  .adco-buttons .adco-clockout-btn {
+    min-width: 90px;
+    padding: 8px 12px;
+  }
+}

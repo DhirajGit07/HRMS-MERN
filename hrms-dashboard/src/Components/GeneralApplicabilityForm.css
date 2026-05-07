@@ -1,0 +1,498 @@
+.general-applicability-modal-container {
+  display: flex;
+  justify-content: center;
+  width: 87%;
+  height: 92%;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: #f1f3f6;
+  color: #333;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.general-applicability-modal-main-container{
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+.general-applicability-leaveType{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.general-applicability-plus-icon{
+  padding: 10px;
+  background-color: #eeeeee;
+  color: gray;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.strict-timings-employee-checkbox-item{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.general-applicability-modal {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.general-applicability-modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.general-applicability-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.general-applicability-close {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.general-applicability-modal-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+
+.general-applicability-tab {
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 2px solid transparent;
+}
+
+.general-applicability-tab.general-applicability-active {
+  border-bottom: 2px solid #007bff;
+}
+
+.general-applicability-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex-grow: 1;
+  height: 20vh;
+}
+
+.general-applicability-modal-body h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.general-applicability-form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.general-entitlement-form-row{
+  width: 50%;
+}
+
+.general-entitlement-form-grid {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 24px;
+}
+
+.checkbox-group-entitlement {
+  margin-top: 26px;
+}
+
+.general-applicability-form-group {
+  flex: 1 1 calc(33.333% - 24px);
+  display: flex;
+  flex-direction: column;
+}
+
+.general-entitlement-form-group {
+  flex: 1;
+  flex: 1 1 calc(33.333% - 24px);
+  display: flex;
+  flex-direction: column;
+}
+
+.general-entitlement-form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center; 
+}
+
+.general-applicability-form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center; 
+  white-space: nowrap;
+}
+
+.general-applicability-required {
+  color: red;
+  margin-left: 4px;
+}
+
+.general-applicability-tooltip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  cursor: help;
+}
+
+.general-applicability-input {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100% !important;
+  box-sizing: border-box;
+  height: 38px;
+}
+
+.general-applicability-color-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.general-applicability-color-box {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.general-applicability-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 24px;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.general-applicability-cancel {
+  background: #e0e0e0;
+  color: #333;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.general-applicability-cancel:hover {
+  background: #d0d0d0;
+}
+
+.general-applicability-save {
+  background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.general-applicability-save:hover {
+  background: #0b7dda;
+}
+
+.general-applicability-custom-dropdown {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.general-applicability-dropdown-header {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.general-applicability-dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.general-applicability-option-item {
+  /* display: flex; */
+  /* display: flex;
+  align-items: center;
+  padding: 8px 12px; */
+  padding: 8px 0px; 
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.general-applicability-option-item:hover {
+  background-color: #f5f5f5;
+}
+
+.general-applicability-checkbox {
+  margin-right: 10px;
+  width: 40px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.general-applicability-option-label {
+  cursor: pointer;
+  flex-grow: 1;
+  margin-left: 8px;
+  user-select: none;
+}
+
+.general-applicability-dropdown-arrow {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+/* Ensure all inputs have the same width */
+.general-applicability-form-group input,
+.general-applicability-form-group select {
+  /* min-width: 0px; */
+  /* width: 100%; */
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+
+  .general-entitlement-form-grid {
+    margin-bottom: 24px;
+  }
+
+
+  .general-applicability-modal-main-container{
+      flex-direction: row;
+      overflow-y: hidden;
+      margin-top: 100px;
+  }
+  /* .general-applicability-modal-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  } */
+
+  .general-applicability-modal {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+  }
+
+  .general-applicability-modal-header {
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    background: white;
+    /* z-index: 100; */
+  }
+
+  .general-applicability-modal-header h2 {
+    font-size: 18px;
+  }
+
+  .general-applicability-modal-tabs {
+    padding: 0 16px;
+    position: sticky;
+    top: 56px; /* header height */
+    background: white;
+    z-index: 90;
+  }
+
+  .general-applicability-tab {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .general-applicability-modal-body {
+    padding: 16px;
+    margin-bottom: 100px;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  .general-applicability-modal-body h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .general-applicability-form-grid {
+    gap: 16px;
+    margin-bottom: 60px; /* Space for footer */
+  }
+
+  .general-applicability-form-group {
+    flex: 1 1 100%;
+  }
+
+  .general-applicability-input {
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .general-applicability-modal-footer {
+    position: fixed;
+    bottom: 0;
+    left: 185px;
+    right: 0;
+    padding: 12px 15px;
+    background: white;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: end;
+    /* width: 100%; */
+    /* gap: 10px; */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* .general-applicability-cancel,
+  .general-applicability-save {
+    padding: 12px;
+    font-size: 1rem;
+    flex: 1;
+    height: auto;
+  } */
+}
+
+@media only screen and (max-width: 600px) {
+  .general-applicability-modal-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 15px;
+    background: white;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: end;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+  .general-applicability-modal-container{
+    width: 100%;
+  }
+  
+}
+
+@media only screen and (max-width: 883px) {
+.general-applicability-modal-footer {
+  margin-bottom: 6px;
+}
+}
+
+@media only screen and (max-width: 480px) {
+  .general-applicability-modal-container{
+    width: 100%;
+  }
+  .general-applicability-form-grid {
+    flex-direction: column;
+    margin-bottom: 100px; /* Space for footer */
+  }
+
+  .general-applicability-form-group {
+    min-width: 100%;
+  }
+
+  .general-applicability-color-picker {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .general-applicability-color-box {
+    margin-top: 0;
+  }
+
+  .general-applicability-modal-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 15px;
+    background: white;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: end;
+    /* width: 100%; */
+    /* gap: 10px; */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+  
+  .general-applicability-cancel,
+  .general-applicability-save {
+    padding: 12px;
+    font-size: 1rem;
+    flex: 1;
+    height: auto;
+  }
+}

@@ -1,0 +1,699 @@
+/* Exit Details View Styles */
+.exitview-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: #f1f3f6;
+}
+
+/* Table controls */
+.exitview-table-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Search bar styles */
+.exitview-search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.exitview-search-icon {
+  position: absolute;
+  left: 10px;
+  color: #7f8c8d;
+}
+
+.exitview-search-input {
+  padding: 8px 12px 8px 35px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.exitview-search-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Add record button */
+.exitview-add-record-btn {
+  padding: 8px 16px;
+  background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.exitview-add-record-btn:hover {
+  background: linear-gradient(to right, #4fa3f4, #1e88e5, #1565c0);
+}
+
+.exitview-export-btn {
+  padding: 8px 16px;
+  background: linear-gradient(to right, #66bb6a, #4CAF50, #388e3c);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.exitview-export-btn:hover {
+  background: linear-gradient(to right, #57a85a, #43a047, #2e7d32);
+}
+
+/* Table container */
+.exitview-table-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  max-height: 70vh;
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  /* Firefox specific fix */
+  scrollbar-width: thin;
+}
+
+.exitview-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: max-content;
+  /* Firefox specific fix */
+  table-layout: auto;
+}
+
+/* Table headers */
+.exitview-table-header {
+  background-color: #e9e9e9 !important;
+  color: #4b5b6d !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.exitview-header-cell {
+  padding: 12px 8px;
+  text-align: left;
+  background-color: #e9e9e9;
+  color: #4b5b6d;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #dee2e6;
+  border-right: 1px solid #e0e0e0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Firefox specific fix */
+  position: relative;
+}
+
+.exitview-header-cell:last-child {
+  border-right: none;
+}
+
+.exitview-header-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.exitview-header-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.exitview-sort-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Table rows */
+.exitview-table-body {
+  background-color: white;
+}
+
+.exitview-table-row {
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.2s;
+}
+
+.exitview-table-row:hover {
+  background-color: #f8f9fa;
+}
+
+.exitview-table-cell {
+  padding: 12px 8px;
+  font-size: 14px;
+  color: #495057;
+  vertical-align: top;
+  border-right: 1px solid #e0e0e0;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Firefox specific fix */
+  min-width: 0;
+}
+
+.exitview-table-cell:last-child {
+  border-right: none;
+}
+
+.exitview-actions-cell {
+  text-align: center;
+}
+
+/* Action buttons */
+.exitview-action-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.exitview-edit-btn,
+.exitview-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.exitview-edit-btn:hover {
+  opacity: 1;
+  color: #ffc107;
+}
+
+.exitview-delete-btn:hover {
+  opacity: 1;
+  color: #dc3545;
+}
+
+/* No records */
+.exitview-no-records {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #6c757d;
+}
+
+/* Modal */
+.exitview-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.exitview-modal-content {
+  background-color: #fff;
+  padding: 24px 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+}
+
+.exitview-modal-content h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #c62828;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.exitview-modal-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.exitview-modal-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.exitview-confirm-btn,
+.exitview-cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.exitview-status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.exitview-status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.exitview-status.accepted {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.exitview-status.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.exitview-status-select {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 100%;
+  cursor: pointer;
+}
+
+.exitview-status-select:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.exitview-confirm-btn {
+  background-color: red;
+  color: white;
+}
+
+.exitview-cancel-btn {
+  background-color: #b0b0b0;
+  color: #ffffff;
+}
+
+.exitview-warning-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+}
+
+.exit-swal2-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.exit-swal2-confirm-export {
+  background-color: transparent;
+  color: #2196F3;
+  border: 1px solid #2196F3;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.exit-swal2-cancel-export {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.exitview-company-info {
+  margin: 20px 0 10px 10px;
+  background-color: #f5f7fa;
+  padding: 10px 15px;
+  margin-bottom: -2rem;
+  border-left: 4px solid #4a90e2;
+  border-radius: 6px;
+}
+
+.exitview-company-info h3,
+.exitview-company-info h4 {
+  margin: 2px 0;
+  font-weight: 500;
+}
+
+.exitview-company-info span {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .exitview-container {
+    padding: 10px;
+    margin-top: 120px;
+  }
+
+  .exitview-table-controls {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .exitview-search-container {
+    margin-left: 0;
+    width: 100%;
+    order: 0;
+  }
+
+  .exitview-search-input {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 35px;
+  }
+
+  .exitview-search-icon {
+    margin-left: 10px;
+    left: 0;
+  }
+
+  .exitview-controls-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    order: 2;
+    width: 100%;
+  }
+
+  .exitview-add-record-btn,
+  .exitview-export-btn {
+    flex: 1;
+    min-width: 50px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 8px 6px;
+    font-size: 13px;
+    justify-content: center;
+  }
+
+  .exitview-company-info {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+  }
+
+  .exitview-company-info h3 {
+    font-size: 16px;
+  }
+
+  .exitview-company-info h4 {
+    font-size: 14px;
+  }
+
+  .exitview-table-scroll-container {
+    max-height: 65vh;
+  }
+
+  .exitview-header-cell,
+  .exitview-table-cell {
+    font-size: 12px;
+    padding: 8px 4px;
+    min-width: 80px;
+  }
+
+  .exitview-action-buttons {
+    gap: 8px;
+  }
+}
+
+/* Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .exitview-controls-group {
+    flex-wrap: wrap;
+  }
+
+  .exitview-add-record-btn {
+    flex: 1 0 50%;
+  }
+
+  .exitview-export-btn {
+    flex: 1 0 calc(40% - 4px);
+  }
+
+  .exitview-search-input {
+    font-size: 13px;
+  }
+
+  .exitview-header-cell,
+  .exitview-table-cell {
+    font-size: 11px;
+    min-width: 70px;
+  }
+}
+
+/* Very Small Phones (<= 360px) */
+@media (max-width: 360px) {
+  .exitview-add-record-btn,
+  .exitview-export-btn {
+    font-size: 12px;
+    padding: 6px 4px;
+  }
+
+  .exitview-search-icon {
+    margin-left: 8px;
+  }
+
+  .exitview-header-cell,
+  .exitview-table-cell {
+    font-size: 10px;
+    min-width: 60px;
+  }
+}
+
+/* Tablet Landscape (820px - 1024px) */
+@media (min-width: 820px) and (max-width: 1024px) {
+  .exitview-container {
+    padding: 15px;
+  }
+
+  .exitview-table-controls {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .exitview-search-container {
+    flex: 1 1 100%;
+    margin-left: 420px;
+  }
+
+  .exitview-search-input {
+    width: 50%;
+    margin-left: 0;
+    padding-left: 35px;
+  }
+
+  .exitview-search-icon {
+    margin-left: 10px;
+    left: 0;
+  }
+
+  .exitview-controls-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .exitview-add-record-btn,
+  .exitview-export-btn {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .exitview-table-scroll-container {
+    max-height: 70vh;
+  }
+
+  .exitview-header-cell,
+  .exitview-table-cell {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+
+/* Tablet Portrait (600px - 819px) */
+@media (min-width: 600px) and (max-width: 819px) {
+  .exitview-table-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .exitview-search-container {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .exitview-search-input {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .exitview-controls-group {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .exitview-add-record-btn {
+    flex: 1;
+  }
+
+  .exitview-export-btn {
+    flex: 1;
+    font-size: 13px;
+  }
+
+  .exitview-table-scroll-container {
+    max-height: 65vh;
+  }
+
+  .exitview-header-cell,
+  .exitview-table-cell {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+}
+
+/* iPad Portrait (768px) Specific Fixes */
+@media (min-width: 768px) and (max-width: 819px) {
+   .exitview-container {
+    padding: 10px;
+  }
+
+  .exitview-table-controls {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .exitview-search-container {
+    margin-left: 0;
+    width: 100%;
+    order: 0;
+  }
+
+  .exitview-search-input {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 35px;
+  }
+
+  .exitview-search-icon {
+    margin-left: 10px;
+    left: 0;
+  }
+
+  .exitview-controls-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    order: 2;
+    width: 100%;
+  }
+
+  .exitview-add-record-btn,
+  .exitview-export-btn {
+    flex: 1;
+    min-width: 50px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 8px 6px;
+    font-size: 13px;
+    justify-content: center;
+  }
+
+  .exitview-company-info {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+  }
+
+  .exitview-company-info h3 {
+    font-size: 16px;
+  }
+
+  .exitview-company-info h4 {
+    font-size: 14px;
+  }
+
+  .exitview-table-scroll-container {
+    max-height: 65vh;
+  }
+
+  .exitview-header-cell,
+  .exitview-table-cell {
+    font-size: 12px;
+    padding: 8px 4px;
+    min-width: 80px;
+  }
+
+  .exitview-action-buttons {
+    gap: 8px;
+  }
+}
+
+/* Firefox Specific Fixes */
+@-moz-document url-prefix() {
+  .exitview-table {
+    table-layout: auto !important;
+  }
+  
+  .exitview-header-cell {
+    background-attachment: local;
+    position: relative;
+  }
+  
+  .exitview-table-cell {
+    min-width: 0;
+    overflow: hidden;
+  }
+  
+  .exitview-table-scroll-container {
+    scrollbar-width: thin;
+  }
+}

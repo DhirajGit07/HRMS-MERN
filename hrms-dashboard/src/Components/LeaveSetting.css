@@ -1,0 +1,359 @@
+/* Main container styles */
+.LS-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* Main content area */
+.LS-main {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Card styles */
+.LS-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  max-height: 85vh;
+  /* overflow-y: auto; */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+
+/* Custom scrollbar for card */
+.LS-card::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.LS-card::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.LS-card::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.LS-card::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Header styles */
+.LS-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Add button styles */
+.LS-add-btn {
+  background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.LS-add-btn:hover {
+  background: linear-gradient(to right, #4ba8f0, #1e88e5, #1565c0);
+}
+
+.LS-add-icon {
+  font-size: 14px;
+}
+
+/* Tab styles */
+.LS-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar for tabs */
+.LS-tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.LS-tabs::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.LS-tabs::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.LS-tabs::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.LS-tab {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.LS-tab.LS-active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Table container styles */
+.LS-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar for table */
+.LS-table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.LS-tabs::-webkit-scrollbar {
+  height: 2px;
+}
+
+.LS-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.LS-table-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.LS-table-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Table styles */
+.LS-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px; /* Ensures table is wide enough for horizontal scrolling */
+}
+
+.LS-table th,
+.LS-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 14px;
+}
+
+.LS-table th {
+  background: #f5f5f5;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* List styles for departments/designations */
+.LS-table ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 100px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar for lists */
+.LS-table ul::-webkit-scrollbar {
+  width: 6px;
+}
+.LS-table-container::-webkit-scrollbar {
+  width: 2px;
+  height: 4px;
+}
+
+.LS-table ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.LS-table ul::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.LS-table ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Action button styles */
+.LS-action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.LS-edit-btn,
+.LS-delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.LS-edit-btn {
+  background-color: white;
+  border: 1px solid gray;
+  color: #8c939f;
+}
+
+.LS-delete-btn {
+  border: 1px solid gray;
+  background-color: white;
+  color: #8c939f;
+}
+
+.LS-delete-btn:hover {
+  background-color: rgb(245, 240, 240);
+}
+
+.LS-edit-btn:hover {
+  background-color: rgb(238, 240, 238);
+}
+
+.LS-action-icon {
+  font-size: 13px;
+}
+
+/* Designation list styles */
+.LS-designations-list {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #4b4848;
+}
+
+/* Loading and no-data states */
+.LS-loading,
+.LS-no-data {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 932px) {
+  .LS-table-container {
+    overflow-x: auto;
+    height: 42vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 896px) {
+  .LS-table-container {
+    overflow-x: auto;
+    height: 40vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 883px) {
+  .LS-table-container {
+    overflow-x: auto;
+    height: 35vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 844px) {
+  .LS-table-container {
+    overflow-x: auto;
+    height: 37vh;
+    overflow-y: auto;
+  }
+}
+
+/* Mobile responsive styles for scrolling */
+@media (max-width: 768px) {
+  .LS-container {
+    flex-direction: row;
+    margin-top: 100px; 
+  }
+
+  .LS-main {
+    padding: 12px;
+  }
+
+  .LS-card {
+    padding: 10px;
+    max-height: none;
+  }
+
+  .LS-table-container {
+    overflow-x: auto;
+        height: 25vh;
+    overflow-y: auto;
+  }
+
+  .LS-table th,
+  .LS-table td {
+    padding: 6px;
+    font-size: 12px;
+    min-width: 100px;
+  }
+
+  .LS-table ul {
+    max-height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .LS-table th,
+  .LS-table td {
+    padding: 5px;
+    font-size: 11px;
+    min-width: 80px;
+  }
+
+  .LS-table ul {
+    max-height: 60px;
+  }
+}
+

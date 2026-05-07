@@ -1,0 +1,572 @@
+/* AddressProof Container */
+.address-proof-page-container {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.address-proof-main-container {
+  padding: 20px;
+  background-color: #f1f3f6;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Table controls */
+.address-proof-table-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  flex-wrap: wrap; /* Added for better handling in Firefox */
+}
+
+/* Search bar styles */
+.address-proof-search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  min-width: 0; /* Ensure flex item can shrink */
+}
+
+.address-proof-search-icon {
+  position: absolute;
+  left: 10px;
+  color: #7f8c8d;
+  font-size: 16px; /* Consistent font-size for icon */
+}
+
+.address-proof-search-input {
+  padding: 8px 12px 8px 35px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 300px;
+  width: 100%; /* Ensure full width within container */
+  background-color: white;
+  font-size: 14px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+/* Add record button */
+.address-proof-add-record-btn {
+  background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.address-proof-add-record-btn:hover {
+  background: #0d5bba; /* Simplified hover for consistency */
+}
+
+/* Table container */
+.address-proof-table-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 70vh;
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
+}
+
+.address-proof-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensure fixed layout for consistent column widths */
+  min-width: 1000px; /* Minimum width to prevent column squeezing */
+}
+
+.address-proof-table-header {
+  background-color: #E5E4E2;
+  color: #4b5b6d;
+  font-size: 14px;
+  font-weight: 500;
+  position: -webkit-sticky; /* Support for Safari and Firefox */
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Increased z-index for sticky header */
+}
+
+.address-proof-header-cell {
+  padding: 12px 8px;
+  text-align: left;
+  background-color: #e9e9e9;
+  color: #4b5b6d;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #dee2e6;
+  border-right: 1px solid #e0e0e0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.address-proof-actions-header {
+  text-align: center;
+}
+
+.address-proof-header-cell:last-child {
+  border-right: none;
+}
+
+.address-proof-header-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.address-proof-header-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.address-proof-sort-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.address-proof-table-body {
+  background-color: white;
+}
+
+.address-proof-table-row {
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.2s;
+}
+
+.address-proof-table-row:last-child {
+  border-bottom: none;
+}
+
+.address-proof-table-cell {
+  padding: 12px 8px;
+  font-size: 14px;
+  color: #495057;
+  vertical-align: top;
+  border-right: 1px solid #e0e0e0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.address-proof-table-cell:last-child {
+  border-right: none;
+}
+
+.address-proof-actions-cell {
+  text-align: center;
+  padding: 0;
+}
+
+.address-proof-cell-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}
+
+/* Action buttons */
+.address-proof-action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.address-proof-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity 0.2s, color 0.2s;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.address-proof-delete-btn:hover {
+  opacity: 1;
+  color: #dc3545;
+}
+
+/* No records styles */
+.address-proof-no-records-row td {
+  padding: 0;
+}
+
+.address-proof-no-records {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #6c757d;
+}
+
+.address-proof-no-records-image {
+  margin-bottom: 15px;
+}
+
+.address-proof-image-placeholder {
+  font-size: 48px;
+  opacity: 0.6;
+}
+
+.address-proof-no-records-text {
+  font-size: 16px;
+}
+
+/* Delete Confirm Modal */
+.address-proof-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.address-proof-modal-content {
+  background-color: #fff;
+  padding: 24px 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+}
+
+.address-proof-modal-content h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #c62828;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.address-proof-modal-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.address-proof-modal-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.address-proof-confirm-btn {
+  padding: 8px 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.address-proof-cancel-btn {
+  padding: 8px 16px;
+  background-color: #b0b0b0;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.address-proof-confirm-btn:hover {
+  background-color: #c62828;
+}
+
+.address-proof-cancel-btn:hover {
+  background-color: #b0b0b0;
+  color: #ffffff;
+}
+
+.address-proof-warning-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+/* Media Queries for Responsive Table */
+@media (max-width: 768px) {
+  .address-proof-main-container {
+    margin-top: 120px;
+  }
+
+  .address-proof-table-scroll-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: none;
+    border: 1px solid #ddd;
+    width: 100%;
+  }
+
+  .address-proof-table {
+    width: 100%;
+    min-width: 800px; /* Adjusted for smaller screens */
+    display: table;
+  }
+
+  .address-proof-table-header {
+    display: table-header-group;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .address-proof-table-header tr,
+  .address-proof-table-row {
+    display: table-row;
+  }
+
+  .address-proof-header-cell,
+  .address-proof-table-cell {
+    min-width: initial;
+    width: auto;
+    padding: 10px 8px;
+    font-size: 13px;
+    box-sizing: border-box;
+    display: table-cell;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .address-proof-actions-cell {
+    padding: 0;
+    text-align: center;
+  }
+
+  .address-proof-action-buttons {
+    padding: 8px 0;
+  }
+
+  .address-proof-header-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .address-proof-header-cell,
+  .address-proof-table-cell {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .address-proof-header-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .address-proof-header-cell,
+  .address-proof-table-cell {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+
+  .address-proof-header-text {
+    font-size: 11px;
+  }
+}
+
+/* Special handling for landscape mode on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .address-proof-table-scroll-container {
+    max-height: calc(100vh - 150px);
+  }
+}
+
+/* Media Queries for Search and Button */
+@media (max-width: 992px) {
+  .address-proof-table-controls {
+    padding: 10px;
+  }
+
+  .address-proof-search-container {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .address-proof-table-controls {
+    position: static;
+    box-shadow: none;
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  .address-proof-search-container {
+    max-width: 250px;
+  }
+
+  .address-proof-add-record-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .address-proof-table-controls {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .address-proof-search-container {
+    max-width: 100%;
+    min-width: 100%;
+    order: 1;
+  }
+
+  .address-proof-add-record-btn {
+    order: 2;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .address-proof-search-input {
+    padding: 6px 10px 6px 30px;
+    font-size: 13px;
+  }
+
+  .address-proof-search-icon {
+    left: 8px;
+    font-size: 14px;
+  }
+
+  .address-proof-add-record-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile Responsive Styles for Search and Button - Fixed Width */
+.address-proof-table-controls {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.address-proof-search-container {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.address-proof-search-input {
+  padding: 8px 12px 8px 35px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.address-proof-add-record-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  white-space: nowrap;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+/* Small Phones (320px-480px) */
+@media (max-width: 480px) {
+  .address-proof-search-input {
+    padding: 6px 10px 6px 30px;
+    font-size: 13px;
+    min-width: 120px;
+  }
+
+  .address-proof-add-record-btn {
+    padding: 6px 8px;
+    font-size: 13px;
+    width: 100px;
+  }
+}
+
+/* Very Small Phones (below 320px) */
+@media (max-width: 320px) {
+  .address-proof-table-controls {
+    gap: 5px;
+  }
+
+  .address-proof-search-input {
+    min-width: 100px;
+    padding: 5px 8px 5px 25px;
+    font-size: 12px;
+  }
+
+  .address-proof-add-record-btn {
+    width: 90px;
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+/* Landscape Mode Adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .address-proof-table-controls {
+    padding: 5px 0;
+  }
+
+  .address-proof-search-input {
+    min-width: 180px;
+  }
+
+  .address-proof-add-record-btn {
+    width: 110px;
+  }
+}
+
+/* Tablet Portrait (768px+) */
+@media (min-width: 768px) {
+  .address-proof-search-input {
+    min-width: 200px;
+  }
+
+  .address-proof-add-record-btn {
+    width: 140px;
+  }
+}

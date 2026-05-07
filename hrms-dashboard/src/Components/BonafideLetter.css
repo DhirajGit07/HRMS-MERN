@@ -1,0 +1,598 @@
+/* Bonafide Container */
+.bonafide-container {
+  background-color: #f1f3f6;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Firefox fix for flexbox issues */
+}
+
+/* Table controls */
+.bonafide-table-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  flex-wrap: wrap; /* Added for better handling in Firefox */
+}
+
+/* Search bar styles */
+.bonafide-search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  min-width: 0; /* Ensure flex item can shrink */
+}
+
+.bonafide-search-icon {
+  position: absolute;
+  left: 10px;
+  color: #7f8c8d;
+  font-size: 16px; /* Consistent font-size for icon */
+  z-index: 1;
+}
+
+.bonafide-search-input {
+  padding: 8px 12px 8px 35px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 300px;
+  width: 100%; /* Ensure full width within container */
+  background-color: white;
+  font-size: 14px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  line-height: normal; /* Firefox alignment fix */
+}
+
+/* Add record button */
+.bonafide-add-record-btn {
+  background: linear-gradient(to right, #64b5f6, #2196F3, #1976d2);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.bonafide-add-record-btn:hover {
+  background: #0d5bba; /* Simplified hover for consistency */
+}
+
+/* Table container */
+.bonafide-table-scroll-container {
+  width: 100%;
+  overflow: auto; /* Unified overflow for Firefox compatibility */
+  max-height: 70vh;
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
+}
+
+/* Table */
+.bonafide-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  min-width: 1000px; /* Prevent column squeezing in Firefox */
+  border-spacing: 0;
+}
+
+/* Table header */
+.bonafide-table-header {
+  background-color: #E5E4E2;
+  color: #4b5b6d;
+  font-size: 14px;
+  font-weight: 500;
+  position: -webkit-sticky; /* Support for Safari and Firefox */
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Increased for Firefox */
+}
+
+/* Header cells */
+.bonafide-header-cell {
+  padding: 12px 8px;
+  text-align: left;
+  background-color: #e9e9e9;
+  color: #4b5b6d;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #dee2e6;
+  border-right: 1px solid #e0e0e0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.bonafide-actions-header {
+  text-align: center;
+}
+
+.bonafide-header-cell:last-child {
+  border-right: none;
+}
+
+.bonafide-header-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bonafide-header-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.bonafide-sort-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Table body */
+.bonafide-table-body {
+  background-color: white;
+}
+
+.bonafide-table-row {
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.2s;
+}
+
+.bonafide-table-row:last-child {
+  border-bottom: none;
+}
+
+.bonafide-table-cell {
+  padding: 12px 8px;
+  font-size: 14px;
+  color: #495057;
+  vertical-align: top;
+  border-right: 1px solid #e0e0e0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+  line-height: normal; /* Firefox alignment fix */
+}
+
+.bonafide-table-cell:last-child {
+  border-right: none;
+}
+
+.bonafide-actions-cell {
+  text-align: center;
+  padding: 0;
+}
+
+.bonafide-cell-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}
+
+/* Action buttons */
+.bonafide-action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.bonafide-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity 0.2s, color 0.2s;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bonafide-delete-btn:hover {
+  opacity: 1;
+  color: #dc3545;
+}
+
+/* No records styles */
+.bonafide-no-records-row td {
+  padding: 0;
+}
+
+.bonafide-no-records {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #6c757d;
+}
+
+.bonafide-no-records-image {
+  margin-bottom: 15px;
+}
+
+.bonafide-image-placeholder {
+  font-size: 48px;
+  opacity: 0.6;
+}
+
+.bonafide-no-records-text {
+  font-size: 16px;
+}
+
+/* Delete Confirm Modal */
+.bonafide-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.bonafide-modal-content {
+  background-color: #fff;
+  padding: 24px 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+}
+
+.bonafide-modal-content h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #c62828;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bonafide-modal-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.bonafide-modal-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.bonafide-confirm-btn {
+  padding: 8px 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.bonafide-cancel-btn {
+  padding: 8px 16px;
+  background-color: #b0b0b0;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.bonafide-confirm-btn:hover {
+  background-color: #c62828;
+}
+
+.bonafide-cancel-btn:hover {
+  background-color: #b0b0b0;
+  color: #ffffff;
+}
+
+.bonafide-warning-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+/* Media Queries for Responsive Table */
+@media (max-width: 768px) {
+  .bonafide-container {
+    margin-top: 120px;
+  }
+
+  .bonafide-table-scroll-container {
+    overflow: auto;
+    border: 1px solid #ddd;
+    width: 100%;
+  }
+
+  .bonafide-table {
+    width: 100%;
+    min-width: 800px; /* Adjusted for smaller screens */
+    display: table;
+  }
+
+  .bonafide-table-header {
+    display: table-header-group;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .bonafide-table-header tr,
+  .bonafide-table-row {
+    display: table-row;
+  }
+
+  .bonafide-header-cell,
+  .bonafide-table-cell {
+    min-width: initial;
+    width: auto;
+    padding: 10px 8px;
+    font-size: 13px;
+    box-sizing: border-box;
+    display: table-cell;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bonafide-actions-cell {
+    padding: 0;
+    text-align: center;
+  }
+
+  .bonafide-action-buttons {
+    padding: 8px 0;
+  }
+
+  .bonafide-header-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bonafide-header-cell,
+  .bonafide-table-cell {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .bonafide-header-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bonafide-header-cell,
+  .bonafide-table-cell {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+
+  .bonafide-header-text {
+    font-size: 11px;
+  }
+}
+
+/* Special handling for landscape mode on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .bonafide-table-scroll-container {
+    max-height: calc(100vh - 150px);
+  }
+}
+
+/* Media Queries for Search and Button */
+@media (max-width: 992px) {
+  .bonafide-table-controls {
+    padding: 10px;
+  }
+
+  .bonafide-search-container {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bonafide-table-controls {
+    position: static;
+    box-shadow: none;
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  .bonafide-search-container {
+    max-width: 250px;
+  }
+
+  .bonafide-add-record-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bonafide-table-controls {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .bonafide-search-container {
+    max-width: 100%;
+    min-width: 100%;
+    order: 1;
+  }
+
+  .bonafide-add-record-btn {
+    order: 2;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .bonafide-search-input {
+    padding: 6px 10px 6px 30px;
+    font-size: 13px;
+  }
+
+  .bonafide-search-icon {
+    left: 8px;
+    font-size: 14px;
+  }
+
+  .bonafide-add-record-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile Responsive Styles for Search and Button - Fixed Width */
+.bonafide-table-controls {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.bonafide-search-container {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.bonafide-search-input {
+  padding: 8px 12px 8px 35px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.bonafide-add-record-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  white-space: nowrap;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+/* Small Phones (320px-480px) */
+@media (max-width: 480px) {
+  .bonafide-search-input {
+    padding: 6px 10px 6px 30px;
+    font-size: 13px;
+    min-width: 120px;
+  }
+
+  .bonafide-add-record-btn {
+    padding: 6px 8px;
+    font-size: 13px;
+    width: 100px;
+  }
+}
+
+/* Very Small Phones (below 320px) */
+@media (max-width: 320px) {
+  .bonafide-table-controls {
+    gap: 5px;
+  }
+
+  .bonafide-search-input {
+    min-width: 100px;
+    padding: 5px 8px 5px 25px;
+    font-size: 12px;
+  }
+
+  .bonafide-add-record-btn {
+    width: 90px;
+    padding: 5px;
+    font-size: 12px;
+  }
+}
+
+/* Landscape Mode Adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .bonafide-table-controls {
+    padding: 5px 0;
+  }
+
+  .bonafide-search-input {
+    min-width: 180px;
+  }
+
+  .bonafide-add-record-btn {
+    width: 110px;
+  }
+}
+
+/* Tablet Portrait (768px+) */
+@media (min-width: 768px) {
+  .bonafide-search-input {
+    min-width: 200px;
+  }
+
+  .bonafide-add-record-btn {
+    width: 140px;
+  }
+}
+
+/* Firefox-specific fixes */
+@-moz-document url-prefix() {
+  .bonafide-table-scroll-container {
+    overflow: auto;
+    scrollbar-width: thin; /* Improve scrollbar appearance in Firefox */
+  }
+
+  .bonafide-header-cell,
+  .bonafide-table-cell {
+    background-clip: padding-box;
+    padding: 12px 8px; /* Consistent padding */
+    line-height: normal;
+  }
+
+  .bonafide-search-input {
+    padding: 8px 12px 8px 35px;
+    line-height: normal;
+  }
+
+  .bonafide-table-row {
+    background-image: none;
+  }
+
+  .bonafide-table {
+    width: 100%;
+    min-width: 1000px;
+  }
+}
