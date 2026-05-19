@@ -107,87 +107,85 @@ Each user has different access permissions based on role-based authentication.
 
 ## 🔐 Login 
 
-```md
+
 ![Login Page](./screenshots/login.png)
-```
+
 ## 🔐 Signup 
 
-```md
+
 ![Login Page](./screenshots/Signup.png)
-```
+
 
 ---
 
 ## 🏠 Home Dashboard
 
-```md
+
 ![Home Dashboard](./screenshots/home.png)
-```
+
 
 ---
 
 ## 🚀 Employee Onboarding
 
-```md
 ![Onboarding](./screenshots/onboarding.png)
-```
 
 ---
 
 ## 👨‍💼 Employee Management
 
-```md
+
 ![Employee Management](./screenshots/employee.png)
-```
+
 
 ---
 
 ## 📝 Leave Tracker
 
-```md
+
 ![Leave Tracker](./screenshots/leave-trackers.png)
-```
+
 
 ---
 
 ## ⏰ Attendance Management
 
-```md
+
 ![Attendance](./screenshots/attendance.png)
-```
+
 
 ---
 
 ## 📄 HR Letters
 
-```md
+
 ![HR Letters](./screenshots/hr-letters.png)
-```
+
 
 ---
 
 ## 🏦 PF / ESIC Management
 
-```md
+
 ![PF ESIC](./screenshots/pf-esic.png)
-```
+
 
 ---
 
 ## 🚪 Exit Process
 
-```md
+
 ![Exit Process](./screenshots/exit-process.png)
-```
+
 
 
 ---
 
 ## ⚙️ Global Settings
 
-```md
+
 ![Global Settings](./screenshots/global-settings.png)
-```
+
 
 ---
 
