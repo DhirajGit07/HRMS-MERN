@@ -145,7 +145,7 @@ Each user has different access permissions based on role-based authentication.
 ## 📝 Leave Tracker
 
 ```md
-![Leave Tracker](./screenshots/leave-tracker.png)
+![Leave Tracker](./screenshots/leave-trackers.png)
 ```
 
 ---
@@ -178,14 +178,6 @@ Each user has different access permissions based on role-based authentication.
 
 ```md
 ![Exit Process](./screenshots/exit-process.png)
-```
-
----
-
-## 📂 Files Management
-
-```md
-![Files](./screenshots/files.png)
 ```
 
 
